@@ -1,0 +1,1659 @@
+[
+  {
+    "id": "1",
+    "nom": "Maillot Domicile PSG Handball 2025-26",
+    "description": "Maillot domicile PSG Handball 2025-26 en rouge et bleu marine Nike",
+    "quantite_stock": 45,
+    "prix": 24.99,
+    "devise": "€",
+    "images": [
+      "https://boutique.lnh.fr/46487-large_default/maillot-psg-handball-2526-nike.jpg",
+      "https://boutique.lnh.fr/46485-large_default/maillot-psg-handball-2526-nike.jpg"
+    ],
+    "caracteristiques": {
+      "competition": [
+        "EHF Champions League",
+        "Liqui Moly Starligue"
+      ],
+      "type": "Maillot domicile",
+      "couleurs": [
+        "Rouge",
+        "Bleu marine"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "matiere": "100% Polyester recyclé",
+      "genre": "Homme",
+      "club": "PSG Handball",
+      "pays": "France"
+    }
+  },
+  {
+    "id": "2",
+    "nom": "Maillot Exterieur PSG Handball 2025-26",
+    "description": "Maillot extérieur PSG Handball 2025-26 blanc, rouge et bleu Nike",
+    "quantite_stock": 45,
+    "prix": 24.99,
+    "devise": "€",
+    "images": [
+      "https://cdn.blazimg.com/1800/product/2/0/2025_11_nike_fn8781_hb-101_1.webp",
+      "https://cdn.blazimg.com/1800/product/2/0/2025_11_nike_fn8781_hb-101_2.webp"
+    ],
+    "caracteristiques": {
+      "competition": [
+        "EHF Champions League",
+        "Liqui Moly Starligue"
+      ],
+      "type": "Maillot exterieur",
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Bleu marine"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "matiere": "100% Polyester recyclé",
+      "genre": "Homme",
+      "club": "PSG Handball",
+      "pays": "France"
+    }
+  },
+  {
+    "id": "3",
+    "nom": "Maillot Domicile HBC Nantes 2025-26",
+    "description": "Maillot domicile HBC Nantes 2025-26 violet et jaune Nike",
+    "quantite_stock": 45,
+    "prix": 24.99,
+    "devise": "€",
+    "images": [
+      "https://boutique.lnh.fr/44851-large_default/maillot-replica-domicile-hbc-nantes-2526-nike.jpg",
+      "https://boutique.lnh.fr/44852-large_default/maillot-replica-domicile-hbc-nantes-2526-nike.jpg"
+    ],
+    "caracteristiques": {
+      "competition": [
+        "EHF Champions League",
+        "Liqui Moly Starligue"
+      ],
+      "type": "Maillot domicile",
+      "couleurs": [
+        "Violet",
+        "Jaune"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "matiere": "100% Polyester recyclé",
+      "genre": "Homme",
+      "club": "HBC Nantes",
+      "pays": "France"
+    }
+  },
+  {
+    "id": "4",
+    "nom": "Maillot Exterieur HBC Nantes 2025-26",
+    "description": "Maillot extérieur HBC Nantes 2025-26 blanc Nike",
+    "quantite_stock": 45,
+    "prix": 24.99,
+    "devise": "€",
+    "images": [
+      "https://boutique.lnh.fr/48844-large_default/maillot-replica-exterieur-hbc-nantes-20252026-nike.jpg",
+      "https://boutique.lnh.fr/48845-large_default/maillot-replica-exterieur-hbc-nantes-20252026-nike.jpg"
+    ],
+    "caracteristiques": {
+      "competition": [
+        "EHF Champions League",
+        "Liqui Moly Starligue"
+      ],
+      "type": "Maillot exterieur",
+      "couleurs": [
+        "Blanc"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "matiere": "100% Polyester recyclé",
+      "genre": "Homme",
+      "club": "HBC Nantes",
+      "pays": "France"
+    }
+  },
+  {
+    "id": "5",
+    "nom": "Maillot Domicile Montpellier Handball 2025-26",
+    "description": "Maillot domicile Montpellier Handball 2025-26 bleu",
+    "quantite_stock": 45,
+    "prix": 24.99,
+    "devise": "€",
+    "images": [
+      "https://mhb.lundimatin.biz/fichiers/images/articles/faa0895f01f9270997f02df14299ef04.jpg",
+      "https://mhb.lundimatin.biz/fichiers/images/articles/c07f50a881c81c10d61a662702fea687.jpg"
+    ],
+    "caracteristiques": {
+      "competition": [
+        "Liqui Moly Starligue"
+      ],
+      "type": "Maillot domicile",
+      "couleurs": [
+        "Bleu"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "matiere": "100% Polyester recyclé",
+      "genre": "Homme",
+      "club": "Montpellier Handball",
+      "pays": "France"
+    }
+  },
+  {
+    "id": "6",
+    "nom": "Maillot Exterieur Montpellier Handball 2025-26",
+    "description": "Maillot extérieur Montpellier Handball 2025-26 blanc",
+    "quantite_stock": 45,
+    "prix": 24.99,
+    "devise": "€",
+    "images": [
+      "https://mhb.lundimatin.biz/fichiers/images/articles/d078f215a2292882f2abb2dbd8fed2b1.jpg",
+      "https://mhb.lundimatin.biz/fichiers/images/articles/beb79b0274702fa607e5329bf9c6e3ed.jpg"
+    ],
+    "caracteristiques": {
+      "competition": [
+        "Liqui Moly Starligue"
+      ],
+      "type": "Maillot exterieur",
+      "couleurs": [
+        "Blanc"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "matiere": "100% Polyester recyclé",
+      "genre": "Homme",
+      "club": "Montpellier Handball",
+      "pays": "France"
+    }
+  },
+  {
+    "id": "7",
+    "nom": "Maillot Domicile Limoges 2025-26",
+    "description": "Maillot domicile Limoges 2025-26 bleu marine et or",
+    "quantite_stock": 45,
+    "prix": 24.99,
+    "devise": "€",
+    "images": [
+      "https://static.wixstatic.com/media/52c0ca_5436894e9eb94ef8abf704952f5ce375~mv2.jpg/v1/fill/w_525,h_525,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/52c0ca_5436894e9eb94ef8abf704952f5ce375~mv2.jpg",
+      "https://static.wixstatic.com/media/52c0ca_048eee63fa7846f6bf80719bd6d1ff84~mv2.jpg/v1/fill/w_525,h_525,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/52c0ca_048eee63fa7846f6bf80719bd6d1ff84~mv2.jpg"
+    ],
+    "caracteristiques": {
+      "competition": [
+        "Liqui Moly Starligue"
+      ],
+      "type": "Maillot domicile",
+      "couleurs": [
+        "Bleu marine",
+        "Or"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "matiere": "100% Polyester recyclé",
+      "genre": "Homme",
+      "club": "Limoges",
+      "pays": "France"
+    }
+  },
+  {
+    "id": "8",
+    "nom": "Maillot Exterieur Limoges 2025-26",
+    "description": "Maillot extérieur Limoges 2025-26 blanc",
+    "quantite_stock": 45,
+    "prix": 24.99,
+    "devise": "€",
+    "images": [
+      "https://static.wixstatic.com/media/52c0ca_05bc81b243504a24b8789832869529a5~mv2.jpg/v1/fill/w_525,h_525,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/52c0ca_05bc81b243504a24b8789832869529a5~mv2.jpg",
+      "https://static.wixstatic.com/media/52c0ca_17d92bdcb5da4051b65f598013944eec~mv2.jpg/v1/fill/w_525,h_525,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/52c0ca_17d92bdcb5da4051b65f598013944eec~mv2.jpg"
+    ],
+    "caracteristiques": {
+      "competition": [
+        "Liqui Moly Starligue"
+      ],
+      "type": "Maillot exterieur",
+      "couleurs": [
+        "Blanc"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "matiere": "100% Polyester recyclé",
+      "genre": "Homme",
+      "club": "Limoges",
+      "pays": "France"
+    }
+  },
+  {
+    "id": "9",
+    "nom": "Maillot Domicile Chambéry 2025-26",
+    "description": "Maillot domicile Chambéry 2025-26 noir et jaune",
+    "quantite_stock": 45,
+    "prix": 24.99,
+    "devise": "€",
+    "images": [
+      "https://www.shop.teamchambe.com/cdn/shop/files/Maillotofficiel25_26-Domicile-Face-TeamChambe.jpg?v=1769533349&width=1600",
+      "https://www.shop.teamchambe.com/cdn/shop/files/Maillotofficiel25_26-Domicile-Dos-TeamChambe.jpg?v=1769533349&width=1600"
+    ],
+    "caracteristiques": {
+      "competition": [
+        "Liqui Moly Starligue"
+      ],
+      "type": "Maillot domicile",
+      "couleurs": [
+        "Noir",
+        "Jaune"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "matiere": "100% Polyester recyclé",
+      "genre": "Homme",
+      "club": "Chambéry",
+      "pays": "France"
+    }
+  },
+  {
+    "id": "10",
+    "nom": "Maillot Extérieur Chambéry 2025-26",
+    "description": "Maillot extérieur Chambéry 2025-26 blanc, jaune et noir",
+    "quantite_stock": 45,
+    "prix": 24.99,
+    "devise": "€",
+    "images": [
+      "https://www.shop.teamchambe.com/cdn/shop/files/Maillotofficiel25_26-Exterieur-Face-TeamChambe_73f84bd1-d451-4c20-b718-b45719c25244.jpg?v=1769605637&width=1600",
+      "https://www.shop.teamchambe.com/cdn/shop/files/Maillotofficiel25_26-Exterieur-Dos-TeamChambe_72f5f89a-9ced-4508-88c8-b0adfa0d41ea.jpg?v=1769605637&width=1600"
+    ],
+    "caracteristiques": {
+      "competition": [
+        "Liqui Moly Starligue"
+      ],
+      "type": "Maillot extérieur",
+      "couleurs": [
+        "Blanc",
+        "Jaune",
+        "Noir"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "matiere": "100% Polyester recyclé",
+      "genre": "Homme",
+      "club": "Chambéry",
+      "pays": "France"
+    }
+  },
+  {
+    "id": "11",
+    "nom": "Maillot Domicile Tremblay HB 2025-26",
+    "description": "Maillot domicile Tremblay HB 2025-26 bleu et orange Adidas",
+    "quantite_stock": 45,
+    "prix": 24.99,
+    "devise": "€",
+    "images": [
+      "https://boutique.osports.fr/tremblay-handball/23667-large_default/maillot-domicile-adulte-adidas.jpg",
+      "https://boutique.osports.fr/tremblay-handball/23668-large_default/maillot-domicile-adulte-adidas.jpg"
+    ],
+    "caracteristiques": {
+      "competition": [
+        "Liqui Moly Starligue"
+      ],
+      "type": "Maillot domicile",
+      "couleurs": [
+        "Bleu",
+        "Orange"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "matiere": "100% Polyester recyclé",
+      "genre": "Homme",
+      "club": "Tremblay",
+      "pays": "France"
+    }
+  },
+  {
+    "id": "12",
+    "nom": "Maillot Extérieur Tremblay HB 2025-26",
+    "description": "Maillot extérieur Tremblay HB 2025-26 blanc et orange Adidas",
+    "quantite_stock": 45,
+    "prix": 24.99,
+    "devise": "€",
+    "images": [
+      "https://boutique.osports.fr/tremblay-handball/23784-large_default/maillot-exterieur-adulte-adidas.jpg",
+      "https://boutique.osports.fr/tremblay-handball/23785-large_default/maillot-exterieur-adulte-adidas.jpg"
+    ],
+    "caracteristiques": {
+      "competition": [
+        "Liqui Moly Starligue"
+      ],
+      "type": "Maillot extérieur",
+      "couleurs": [
+        "Blanc",
+        "Orange"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "matiere": "100% Polyester recyclé",
+      "genre": "Homme",
+      "club": "Tremblay",
+      "pays": "France"
+    }
+  },
+  {
+    "id": "13",
+    "nom": "Maillot Domicile SRVHB 2025-26",
+    "description": "Maillot domicile Saint-Raphaël 2025-26 bleu, rouge et jaune",
+    "quantite_stock": 45,
+    "prix": 24.99,
+    "devise": "€",
+    "images": [
+      "https://boutique.lnh.fr/48896-medium_default/maillot-domicile-2526-saint-raphael-var-handball.jpg",
+      "https://boutique.lnh.fr/48897-medium_default/maillot-domicile-2526-saint-raphael-var-handball.jpg"
+    ],
+    "caracteristiques": {
+      "competition": [
+        "Liqui Moly Starligue"
+      ],
+      "type": "Maillot domicile",
+      "couleurs": [
+        "Bleu",
+        "Rouge",
+        "Jaune"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "matiere": "100% Polyester recyclé",
+      "genre": "Homme",
+      "club": "Saint-Raphaël VHB",
+      "pays": "France"
+    }
+  },
+  {
+    "id": "14",
+    "nom": "Maillot Extérieur SRVHB 2025-26",
+    "description": "Maillot extérieur Saint-Raphaël 2025-26 blanc, jaune et rouge",
+    "quantite_stock": 45,
+    "prix": 24.99,
+    "devise": "€",
+    "images": [
+      "https://boutique.lnh.fr/48892-large_default/maillot-exterieur-2025-2026-saint-raphael-var-handball.jpg",
+      "https://boutique.lnh.fr/48893-large_default/maillot-exterieur-2025-2026-saint-raphael-var-handball.jpg"
+    ],
+    "caracteristiques": {
+      "competition": [
+        "Liqui Moly Starligue"
+      ],
+      "type": "Maillot extérieur",
+      "couleurs": [
+        "Blanc",
+        "Jaune",
+        "Rouge",
+        "Bleu"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "matiere": "100% Polyester recyclé",
+      "genre": "Homme",
+      "club": "Saint-Raphaël VHB",
+      "pays": "France"
+    }
+  },
+  {
+    "id": "15",
+    "nom": "Maillot Domicile FENIX Toulouse Handball 2025-26",
+    "description": "Maillot domicile FENIX Toulouse 2025-26 bleu et or",
+    "quantite_stock": 45,
+    "prix": 24.99,
+    "devise": "€",
+    "images": [
+      "https://fenix-toulouse.mypresta.shop/91-product_main/maillot-or-2526-domicile.jpg"
+    ],
+    "caracteristiques": {
+      "competition": [
+        "Liqui Moly Starligue"
+      ],
+      "type": "Maillot domicile",
+      "couleurs": [
+        "Bleu",
+        "Or"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "matiere": "100% Polyester recyclé",
+      "genre": "Homme",
+      "club": "FENIX Toulouse",
+      "pays": "France"
+    }
+  },
+  {
+    "id": "16",
+    "nom": "Maillot Extérieur FENIX Toulouse Handball 2025-26",
+    "description": "Maillot extérieur FENIX Toulouse 2025-26 blanc, orange et rose",
+    "quantite_stock": 45,
+    "prix": 24.99,
+    "devise": "€",
+    "images": [
+      "https://fenix-toulouse.mypresta.shop/93-product_main/maillot-la-ville-en-rose-2526-exterieur.jpg"
+    ],
+    "caracteristiques": {
+      "competition": [
+        "Liqui Moly Starligue"
+      ],
+      "type": "Maillot extérieur",
+      "couleurs": [
+        "Blanc",
+        "Orange",
+        "Rose"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "matiere": "100% Polyester recyclé",
+      "genre": "Homme",
+      "club": "FENIX Toulouse",
+      "pays": "France"
+    }
+  },
+  {
+    "id": "17",
+    "nom": "Maillot Domicile PAUC Handball 2025-26",
+    "description": "Maillot domicile PAUC Handball 2025-26 noir et or",
+    "quantite_stock": 45,
+    "prix": 24.99,
+    "devise": "€",
+    "images": [
+      "https://static.wixstatic.com/media/0d08fe_42089e6f9fd64432b0058ec3697add91~mv2.jpg/v1/fill/w_610,h_766,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0d08fe_42089e6f9fd64432b0058ec3697add91~mv2.jpg",
+      "https://static.wixstatic.com/media/0d08fe_2b23c3d2794445f2988c7afd737573f5~mv2.jpg/v1/fill/w_421,h_535,al_c,q_85,usm_0.66_1.00_0.01/0d08fe_2b23c3d2794445f2988c7afd737573f5~mv2.jpg"
+    ],
+    "caracteristiques": {
+      "competition": [
+        "Liqui Moly Starligue"
+      ],
+      "type": "Maillot domicile",
+      "couleurs": [
+        "Noir",
+        "Or"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "matiere": "100% Polyester recyclé",
+      "genre": "Homme",
+      "club": "PAUC Handball",
+      "pays": "France"
+    }
+  },
+  {
+    "id": "18",
+    "nom": "Maillot Third PAUC Handball 2025-26",
+    "description": "Maillot third PAUC Handball 2025-26 bleu et blanc",
+    "quantite_stock": 45,
+    "prix": 24.99,
+    "devise": "€",
+    "images": [
+      "https://static.wixstatic.com/media/0d08fe_39d28b1e7fd74bedb5f067950590df44~mv2.jpg/v1/fill/w_610,h_1084,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0d08fe_39d28b1e7fd74bedb5f067950590df44~mv2.jpg",
+      "https://static.wixstatic.com/media/0d08fe_1d2b3e9e7e0a4335b1c5e111340d05f7~mv2.png/v1/fill/w_610,h_1084,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/0d08fe_1d2b3e9e7e0a4335b1c5e111340d05f7~mv2.png"
+    ],
+    "caracteristiques": {
+      "competition": [
+        "Liqui Moly Starligue"
+      ],
+      "type": "Maillot third",
+      "couleurs": [
+        "Bleu",
+        "Blanc"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "matiere": "100% Polyester recyclé",
+      "genre": "Homme",
+      "club": "PAUC Handball",
+      "pays": "France"
+    }
+  },
+  {
+    "id": "19",
+    "nom": "Maillot Domicile Cesson Rennes Métropole Handball 2025-26",
+    "description": "Maillot domicile Cesson Rennes 2025-26 noir et blanc",
+    "quantite_stock": 45,
+    "prix": 24.99,
+    "devise": "€",
+    "images": [
+      "https://grinta-imgproxy-production.herokuapp.com/9td0TgZP-VvFcKN0MZuCHllJJ2_Or4foW7-4N6ld-qo/w:800/plain/s3://grinta-assets-production/4eebr01ik7di763ixhxhrjhwx8qm",
+      "https://grinta-imgproxy-production.herokuapp.com/8ZFPgT7VQa7H-lZbUFKbdSYOaHiygTegD-_r707hy-k/w:800/plain/s3://grinta-assets-production/sa0ld7zlbz3h71mv3zjdnn3yxdns"
+    ],
+    "caracteristiques": {
+      "competition": [
+        "Liqui Moly Starligue"
+      ],
+      "type": "Maillot domicile",
+      "couleurs": [
+        "Noir",
+        "Blanc"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "matiere": "100% Polyester recyclé",
+      "genre": "Homme",
+      "club": "Cesson Rennes",
+      "pays": "France"
+    }
+  },
+  {
+    "id": "20",
+    "nom": "Maillot Extérieur Cesson Rennes Métropole Handball 2025-26",
+    "description": "Maillot extérieur Cesson Rennes 2025-26 blanc et rose",
+    "quantite_stock": 45,
+    "prix": 24.99,
+    "devise": "€",
+    "images": [
+      "https://grinta-imgproxy-production.herokuapp.com/8qqLA1WyBaVJBiO7nowwpe2n-0NcfegdoKp0KQmtt6s/w:800/plain/s3://grinta-assets-production/hgnvk23zgd2r901w83vlzp0pr3m5",
+      "https://grinta-imgproxy-production.herokuapp.com/wppHt7xK6sgT6PbP2eyaKnLVQuBaQmKhaWYwj4N3Gd4/w:800/plain/s3://grinta-assets-production/7r99lgk6b5ujmhnx2pph0p9e252r"
+    ],
+    "caracteristiques": {
+      "competition": [
+        "Liqui Moly Starligue"
+      ],
+      "type": "Maillot extérieur",
+      "couleurs": [
+        "Blanc",
+        "Rose"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "matiere": "100% Polyester recyclé",
+      "genre": "Homme",
+      "club": "Cesson Rennes",
+      "pays": "France"
+    }
+  },
+  {
+    "id": "21",
+    "nom": "Maillot Domicile USAM Nîmes Handball 2025-26",
+    "description": "Maillot domicile USAM Nîmes 2025-26 vert et beige",
+    "quantite_stock": 45,
+    "prix": 24.99,
+    "devise": "€",
+    "images": [
+      "https://boutique.usam-nimesgard.fr/cdn/shop/files/4_169c6bb7-87e9-4b6c-a32e-38e050ae7c44.png?v=1771582383&width=3840",
+      "https://boutique.usam-nimesgard.fr/cdn/shop/files/MH3.png?v=1771582008&width=3840"
+    ],
+    "caracteristiques": {
+      "competition": [
+        "Liqui Moly Starligue"
+      ],
+      "type": "Maillot domicile",
+      "couleurs": [
+        "Vert",
+        "Beige"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "matiere": "100% Polyester recyclé",
+      "genre": "Homme",
+      "club": "USAM Nîmes",
+      "pays": "France"
+    }
+  },
+  {
+    "id": "22",
+    "nom": "Maillot Extérieur USAM Nîmes Handball 2025-26",
+    "description": "Maillot extérieur USAM Nîmes 2025-26 blanc et vert",
+    "quantite_stock": 45,
+    "prix": 24.99,
+    "devise": "€",
+    "images": [
+      "https://boutique.usam-nimesgard.fr/cdn/shop/files/5_ca44dd3f-b954-46d0-84f3-9e762067c58d.png?v=1771582383&width=3840",
+      "https://boutique.usam-nimesgard.fr/cdn/shop/files/MA3.png?v=1771582006&width=3840"
+    ],
+    "caracteristiques": {
+      "competition": [
+        "Liqui Moly Starligue"
+      ],
+      "type": "Maillot extérieur",
+      "couleurs": [
+        "Blanc",
+        "Vert"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "matiere": "100% Polyester recyclé",
+      "genre": "Homme",
+      "club": "USAM Nîmes",
+      "pays": "France"
+    }
+  },
+  {
+    "id": "23",
+    "nom": "Maillot Domicile US Dunkerque Handball Grand Littoral 2025-26",
+    "description": "Maillot domicile USDK Dunkerque 2025-26 noir",
+    "quantite_stock": 45,
+    "prix": 24.99,
+    "devise": "€",
+    "images": [
+      "https://achetez-usdk.com/482-large_default/maillot-domicile-USDK.jpg",
+      "https://achetez-usdk.com/489-large_default/maillot-domicile-USDK.jpg"
+    ],
+    "caracteristiques": {
+      "competition": [
+        "Liqui Moly Starligue"
+      ],
+      "type": "Maillot domicile",
+      "couleurs": [
+        "Noir"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "matiere": "100% Polyester recyclé",
+      "genre": "Homme",
+      "club": "USDK Dunkerque",
+      "pays": "France"
+    }
+  },
+  {
+    "id": "24",
+    "nom": "Maillot Extérieur US Dunkerque Handball Grand Littoral 2025-26",
+    "description": "Maillot extérieur USDK Dunkerque 2025-26 blanc",
+    "quantite_stock": 45,
+    "prix": 24.99,
+    "devise": "€",
+    "images": [
+      "https://achetez-usdk.com/491-large_default/maillot-exterieur-USDK.jpg",
+      "https://achetez-usdk.com/495-large_default/maillot-exterieur-USDK.jpg"
+    ],
+    "caracteristiques": {
+      "competition": [
+        "Liqui Moly Starligue"
+      ],
+      "type": "Maillot extérieur",
+      "couleurs": [
+        "Blanc"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "matiere": "100% Polyester recyclé",
+      "genre": "Homme",
+      "club": "USDK Dunkerque",
+      "pays": "France"
+    }
+  },
+  {
+    "id": "25",
+    "nom": "Maillot Domicile C'Chartres Métropole Handball 2025-26",
+    "description": "Maillot domicile C'Chartres MHB 2025-26 bleu et blanc",
+    "quantite_stock": 45,
+    "prix": 24.99,
+    "devise": "€",
+    "images": [
+      "https://boutique.ccmhb.fr/643-large_default/maillot-domicile-adulte-25-26.jpg"
+    ],
+    "caracteristiques": {
+      "competition": [
+        "Liqui Moly Starligue"
+      ],
+      "type": "Maillot domicile",
+      "couleurs": [
+        "Bleu",
+        "Blanc"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "matiere": "100% Polyester recyclé",
+      "genre": "Homme",
+      "club": "C'Chartres MHB",
+      "pays": "France"
+    }
+  },
+  {
+    "id": "26",
+    "nom": "Maillot Extérieur C'Chartres Métropole Handball 2025-26",
+    "description": "Maillot extérieur C'Chartres MHB 2025-26 blanc et bleu",
+    "quantite_stock": 45,
+    "prix": 24.99,
+    "devise": "€",
+    "images": [
+      "https://boutique.ccmhb.fr/649-large_default/maillot-exterieur-adulte-25-26.jpg"
+    ],
+    "caracteristiques": {
+      "competition": [
+        "Liqui Moly Starligue"
+      ],
+      "type": "Maillot extérieur",
+      "couleurs": [
+        "Blanc",
+        "Bleu"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "matiere": "100% Polyester recyclé",
+      "genre": "Homme",
+      "club": "C'Chartres MHB",
+      "pays": "France"
+    }
+  },
+  {
+    "id": "27",
+    "nom": "Maillot Domicile Dijon Bourgogne Handball 2025-26",
+    "description": "Maillot domicile Dijon BHB 2025-26 bleu marine et blanc",
+    "quantite_stock": 45,
+    "prix": 24.99,
+    "devise": "€",
+    "images": [
+      "https://dijon-metropole-handball.com/wp-content/uploads/maillot-dmh-domicile-avant-2025.webp",
+      "https://dijon-metropole-handball.com/wp-content/uploads/maillot-dmh-domicile-arriere-2025.webp"
+    ],
+    "caracteristiques": {
+      "competition": [
+        "Liqui Moly Starligue"
+      ],
+      "type": "Maillot domicile",
+      "couleurs": [
+        "Bleu Marine",
+        "Blanc"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "matiere": "100% Polyester recyclé",
+      "genre": "Homme",
+      "club": "Dijon BHB",
+      "pays": "France"
+    }
+  },
+  {
+    "id": "28",
+    "nom": "Maillot Extérieur Dijon Bourgogne Handball 2025-26",
+    "description": "Maillot extérieur Dijon BHB 2025-26 blanc et bleu marine",
+    "quantite_stock": 45,
+    "prix": 24.99,
+    "devise": "€",
+    "images": [
+      "https://dijon-metropole-handball.com/wp-content/uploads/maillot-dmh-en-exterieur-avant-2025.webp",
+      "https://dijon-metropole-handball.com/wp-content/uploads/maillot-dmh-en-exterieur-arriere-2025.webp"
+    ],
+    "caracteristiques": {
+      "competition": [
+        "Liqui Moly Starligue"
+      ],
+      "type": "Maillot extérieur",
+      "couleurs": [
+        "Blanc",
+        "Bleu Marine"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "matiere": "100% Polyester recyclé",
+      "genre": "Homme",
+      "club": "Dijon BHB",
+      "pays": "France"
+    }
+  },
+  {
+    "id": "29",
+    "nom": "Maillot Domicile Istres Provence Handball 2025-26",
+    "description": "Maillot domicile Istres 2025-26 violet et or",
+    "quantite_stock": 45,
+    "prix": 24.99,
+    "devise": "€",
+    "images": [
+      "https://store.istreshandball.com/wp-content/uploads/2025/08/Dom-768x768.jpg",
+      "https://store.istreshandball.com/wp-content/uploads/2025/11/Boutique-maillot-3.jpg"
+    ],
+    "caracteristiques": {
+      "competition": [
+        "Liqui Moly Starligue"
+      ],
+      "type": "Maillot domicile",
+      "couleurs": [
+        "Violet",
+        "Or"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "matiere": "100% Polyester recyclé",
+      "genre": "Homme",
+      "club": "Istres",
+      "pays": "France"
+    }
+  },
+  {
+    "id": "30",
+    "nom": "Maillot Extérieur Istres Provence Handball 2025-26",
+    "description": "Maillot extérieur Istres 2025-26 blanc, or et rouge",
+    "quantite_stock": 45,
+    "prix": 24.99,
+    "devise": "€",
+    "images": [
+      "https://store.istreshandball.com/wp-content/uploads/2025/08/ex.jpg",
+      "https://store.istreshandball.com/wp-content/uploads/2025/11/Boutique-maillot-4.jpg"
+    ],
+    "caracteristiques": {
+      "competition": [
+        "Liqui Moly Starligue"
+      ],
+      "type": "Maillot extérieur",
+      "couleurs": [
+        "Blanc",
+        "Or",
+        "Rouge"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "matiere": "100% Polyester recyclé",
+      "genre": "Homme",
+      "club": "Istres",
+      "pays": "France"
+    }
+  },
+  {
+    "id": "31",
+    "nom": "Maillot Domicile Sélestat Alsace Handball 2025-26",
+    "description": "Maillot domicile Sélestat AHB 2025-26 violet et orange",
+    "quantite_stock": 45,
+    "prix": 24.99,
+    "devise": "€",
+    "images": [
+      "https://boutiquesahb.sport2000-alsace.com/7362-large_default/maillot-sahb-junior-25-26-domicile.jpg",
+      "https://www.sa-hb.com/wp-content/uploads/2025/08/P1240045.jpg"
+    ],
+    "caracteristiques": {
+      "competition": [
+        "Liqui Moly Starligue"
+      ],
+      "type": "Maillot domicile",
+      "couleurs": [
+        "Violet",
+        "Orange"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "matiere": "100% Polyester recyclé",
+      "genre": "Homme",
+      "club": "Sélestat AHB",
+      "pays": "France"
+    }
+  },
+  {
+    "id": "32",
+    "nom": "Maillot Extérieur Sélestat Alsace Handball 2025-26",
+    "description": "Maillot extérieur Sélestat AHB 2025-26 blanc et orange",
+    "quantite_stock": 45,
+    "prix": 24.99,
+    "devise": "€",
+    "images": [
+      "https://boutiquesahb.sport2000-alsace.com/7471-large_default/maillot-pro-sahb-25-26-adulte-exterieur.jpg",
+      "https://boutiquesahb.sport2000-alsace.com/7472-large_default/maillot-pro-sahb-25-26-adulte-exterieur.jpg"
+    ],
+    "caracteristiques": {
+      "competition": [
+        "Liqui Moly Starligue"
+      ],
+      "type": "Maillot extérieur",
+      "couleurs": [
+        "Blanc",
+        "Orange"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "matiere": "100% Polyester recyclé",
+      "genre": "Homme",
+      "club": "Sélestat AHB",
+      "pays": "France"
+    }
+  },
+  {
+    "id": "33",
+    "nom": "Maillot Domicile Füchse Berlin 2025-26",
+    "description": "Maillot domicile Füchse Berlin 2025-26 vert et blanc",
+    "quantite_stock": 45,
+    "prix": 24.99,
+    "devise": "€",
+    "images": [
+      "https://cdn.weplayhandball.fr/full/P948961-01.jpg",
+      "https://cdn.weplayhandball.fr/full/P948961-01_01.jpg"
+    ],
+    "caracteristiques": {
+      "competition": [
+        "EHF Champions League"
+      ],
+      "type": "Maillot domicile",
+      "couleurs": [
+        "Vert",
+        "Blanc"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "matiere": "100% Polyester recyclé",
+      "genre": "Homme",
+      "club": "Füchse Berlin",
+      "pays": "Allemagne"
+    }
+  },
+  {
+    "id": "34",
+    "nom": "Maillot Extérieur Füchse Berlin 2025-26",
+    "description": "Maillot extérieur Füchse Berlin 2025-26 vert et noir",
+    "quantite_stock": 45,
+    "prix": 24.99,
+    "devise": "€",
+    "images": [
+      "https://cdn.weplayhandball.fr/full/P948963-02.jpg",
+      "https://cdn.weplayhandball.fr/full/P948963-02_01.jpg"
+    ],
+    "caracteristiques": {
+      "competition": [
+        "EHF Champions League"
+      ],
+      "type": "Maillot extérieur",
+      "couleurs": [
+        "Vert",
+        "Noir"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "matiere": "100% Polyester recyclé",
+      "genre": "Homme",
+      "club": "Füchse Berlin",
+      "pays": "Allemagne"
+    }
+  },
+  {
+    "id": "35",
+    "nom": "Maillot Domicile Aalborg Handbold 2025-26",
+    "description": "Maillot domicile Aalborg 2025-26 rouge",
+    "quantite_stock": 45,
+    "prix": 24.99,
+    "devise": "€",
+    "images": [
+      "https://www.aahshop.dk/app/webroot/_resized/uploads/spillertrojer/25-26/rod-hvid_kortaermet_01_ny-ad6d3610c9c672db8dd3ee54b13467ce.webp",
+      "https://www.aahshop.dk/app/webroot/_resized/uploads/spillertrojer/25-26/rod-hvid_kortaermet_02-2e20c611984fced64a043791b3cd46de.webp"
+    ],
+    "caracteristiques": {
+      "competition": [
+        "EHF Champions League"
+      ],
+      "type": "Maillot domicile",
+      "couleurs": [
+        "Rouge"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "matiere": "100% Polyester recyclé",
+      "genre": "Homme",
+      "club": "Aalborg",
+      "pays": "Danemark"
+    }
+  },
+  {
+    "id": "36",
+    "nom": "Maillot Extérieur Aalborg Handbold 2025-26",
+    "description": "Maillot extérieur Aalborg 2025-26 vert",
+    "quantite_stock": 45,
+    "prix": 24.99,
+    "devise": "€",
+    "images": [
+      "https://www.aahshop.dk/app/webroot/_resized/uploads/spillertrojer/25-26/beige_kortaermet_01-7170680722666341b9e6c78f7de49357.webphttps://cdn.weplayhandball.fr/full/P948963-02.jpg",
+      "https://www.aahshop.dk/app/webroot/_resized/uploads/spillertrojer/25-26/beige_kortaermet_02-59279a1a57bd36938aa00cbaf6af145e.webp"
+    ],
+    "caracteristiques": {
+      "competition": [
+        "EHF Champions League"
+      ],
+      "type": "Maillot extérieur",
+      "couleurs": [
+        "Vert"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "matiere": "100% Polyester recyclé",
+      "genre": "Homme",
+      "club": "Aalborg",
+      "pays": "Danemark"
+    }
+  },
+  {
+    "id": "37",
+    "nom": "Maillot Domicile Industria Kielce 2025-26",
+    "description": "Maillot domicile Kielce 2025-26 jaune et bleu",
+    "quantite_stock": 45,
+    "prix": 24.99,
+    "devise": "€",
+    "images": [
+      "https://industria-s-cdn.stellis.one/imgsize-s/documents/12561232/13623464/ca87b443e6b12cd68f72936ffd75539e.jpg/0760e808-04c2-2975-6632-efff5bd42ea5?version=1.0&t=1768567091961",
+      "https://industria-s-cdn.stellis.one/imgsize-s/documents/12561232/13623464/948f3dc345f8fee2b11305de979b6b26.jpg/0b9c4f80-77ff-49af-5290-2cfdbe628da7?version=1.0&t=1768567092516"
+    ],
+    "caracteristiques": {
+      "competition": [
+        "EHF Champions League"
+      ],
+      "type": "Maillot domicile",
+      "couleurs": [
+        "Jaune",
+        "Bleu"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "matiere": "100% Polyester recyclé",
+      "genre": "Homme",
+      "club": "Kielce",
+      "pays": "Pologne"
+    }
+  },
+  {
+    "id": "38",
+    "nom": "Maillot Extérieur Industria Kielce 2025-26",
+    "description": "Maillot extérieur Kielce 2025-26 marron et blanc",
+    "quantite_stock": 45,
+    "prix": 24.99,
+    "devise": "€",
+    "images": [
+      "https://industria-s-cdn.stellis.one/imgsize-s/documents/12561232/13622805/23a18af9865f1931ca9bf27e247b7333.jpg/2544fdde-dfa9-3fcf-97fb-27e75f896b9c?version=1.0&t=1770892944030",
+      "https://industria-s-cdn.stellis.one/imgsize-s/documents/12561232/13622805/93554b3981dc660ccfdeb33991c95e8c.jpg/15f4fa73-b660-0d32-06cd-cb4e9d207ae3?version=1.0&t=1768559125945"
+    ],
+    "caracteristiques": {
+      "competition": [
+        "EHF Champions League"
+      ],
+      "type": "Maillot extérieur",
+      "couleurs": [
+        "Marron",
+        "Blanc"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "matiere": "100% Polyester recyclé",
+      "genre": "Homme",
+      "club": "Kielce",
+      "pays": "Pologne"
+    }
+  },
+  {
+    "id": "39",
+    "nom": "Maillot Domicile Veszprém Handball 2025-26",
+    "description": "Maillot domicile Veszprém 2025-26 rouge et blanc",
+    "quantite_stock": 45,
+    "prix": 24.99,
+    "devise": "€",
+    "images": [
+      "https://handballveszpremshop.hu/wp-content/uploads/2025/12/jersey_veszprem_25_26-460x460.png",
+      "https://handballveszpremshop.hu/wp-content/uploads/2025/12/VPH_1200-copy-1024x1536.png"
+    ],
+    "caracteristiques": {
+      "competition": [
+        "EHF Champions League"
+      ],
+      "type": "Maillot domicile",
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "matiere": "100% Polyester recyclé",
+      "genre": "Homme",
+      "club": "Veszprém",
+      "pays": "Hongrie"
+    }
+  },
+  {
+    "id": "40",
+    "nom": "Maillot Domicile Sporting Club de Portugal Handball 2025-26",
+    "description": "Maillot domicile Sporting Portugal 2025-26 vert et blanc",
+    "quantite_stock": 45,
+    "prix": 24.99,
+    "devise": "€",
+    "images": [
+      "https://scpconteudos.pt/sites/default/files/styles/large/public/multimedia/imagens/202509/20250918_and_scp_kie_4.jpg?itok=s59tTlGw",
+      "https://scpconteudos.pt/sites/default/files/styles/large/public/multimedia/imagens/202509/20250918_and_scp_kie_19.jpg?itok=lubFdl7n"
+    ],
+    "caracteristiques": {
+      "competition": [
+        "EHF Champions League"
+      ],
+      "type": "Maillot domicile",
+      "couleurs": [
+        "Vert",
+        "Blanc"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "matiere": "100% Polyester recyclé",
+      "genre": "Homme",
+      "club": "Sporting",
+      "pays": "Portugal"
+    }
+  },
+  {
+    "id": "41",
+    "nom": "Maillot Extérieur Sporting Club de Portugal Handball 2025-26",
+    "description": "Maillot extérieur Sporting Portugal 2025-26 noir, vert et blanc",
+    "quantite_stock": 45,
+    "prix": 24.99,
+    "devise": "€",
+    "images": [
+      "https://scpconteudos.pt/sites/default/files/styles/large/public/multimedia/imagens/202409/20240831_and_4_joaopedromorais.jpeg?itok=Ia3VANI8",
+      "https://scpconteudos.pt/sites/default/files/styles/large/public/multimedia/imagens/202409/20240907_and_15_joaopedromorais.jpeg?itok=qqjzsf1Z"
+    ],
+    "caracteristiques": {
+      "competition": [
+        "EHF Champions League"
+      ],
+      "type": "Maillot extérieur",
+      "couleurs": [
+        "Noir",
+        "Vert",
+        "Blanc"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "matiere": "100% Polyester recyclé",
+      "genre": "Homme",
+      "club": "Sporting",
+      "pays": "Portugal"
+    }
+  },
+  {
+    "id": "42",
+    "nom": "Maillot Domicile FC Barcelone Handball 2025-26",
+    "description": "Maillot domicile FC Barcelone 2025-26 bleu marine et rouge",
+    "quantite_stock": 45,
+    "prix": 24.99,
+    "devise": "€",
+    "images": [
+      "https://store.fcbarcelona.com/cdn/shop/files/HJ4590-455_415227838_D_D_1X1_handball.jpg?v=1755867771&width=1200",
+      "https://store.fcbarcelona.com/cdn/shop/files/Handbol-Home-25-26.webp?v=1551918981714870188"
+    ],
+    "caracteristiques": {
+      "competition": [
+        "EHF Champions League"
+      ],
+      "type": "Maillot domicile",
+      "couleurs": [
+        "Bleu Marine",
+        "Rouge"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "matiere": "100% Polyester recyclé",
+      "genre": "Homme",
+      "club": "FC Barcelone",
+      "pays": "Espagne"
+    }
+  },
+  {
+    "id": "43",
+    "nom": "Maillot Extérieur FC Barcelone Handball 2025-26",
+    "description": "Maillot extérieur FC Barcelone 2025-26 beige, bleu et noir",
+    "quantite_stock": 45,
+    "prix": 24.99,
+    "devise": "€",
+    "images": [
+      "https://store.fcbarcelona.com/cdn/shop/files/BARCA1-24662.jpg?v=1753951926&width=1200",
+      "https://store.fcbarcelona.com/cdn/shop/files/BARCA1-24660.jpg?v=1753951926&width=1200"
+    ],
+    "caracteristiques": {
+      "competition": [
+        "EHF Champions League"
+      ],
+      "type": "Maillot extérieur",
+      "couleurs": [
+        "Beige",
+        "Bleu Marine",
+        "Noir"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "matiere": "100% Polyester recyclé",
+      "genre": "Homme",
+      "club": "FC Barcelone",
+      "pays": "Espagne"
+    }
+  },
+  {
+    "id": "44",
+    "nom": "Maillot Domicile SC Magdeburg Handball 2025-26",
+    "description": "Maillot domicile SC Magdeburg 2025-26 noir, rouge, vert et blanc",
+    "quantite_stock": 45,
+    "prix": 24.99,
+    "devise": "€",
+    "images": [
+      "https://cdn.weplayhandball.fr/full/H233606-2001.jpg",
+      "https://cdn.weplayhandball.fr/full/H233606-2001_01.jpg"
+    ],
+    "caracteristiques": {
+      "competition": [
+        "EHF Champions League"
+      ],
+      "type": "Maillot domicile",
+      "couleurs": [
+        "Noir",
+        "Rouge",
+        "Vert",
+        "Blanc"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "matiere": "100% Polyester recyclé",
+      "genre": "Homme",
+      "club": "SC Magdeburg",
+      "pays": "Allemagne"
+    }
+  },
+  {
+    "id": "45",
+    "nom": "Maillot Extérieur SC Magdeburg Handball 2025-26",
+    "description": "Maillot extérieur SC Magdeburg 2025-26 blanc, rouge et vert",
+    "quantite_stock": 45,
+    "prix": 24.99,
+    "devise": "€",
+    "images": [
+      "https://cdn.weplayhandball.fr/full/H233609-9001.jpg",
+      "https://cdn.weplayhandball.fr/full/H233609-9001_01.jpg"
+    ],
+    "caracteristiques": {
+      "competition": [
+        "EHF Champions League"
+      ],
+      "type": "Maillot extérieur",
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Vert"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "matiere": "100% Polyester recyclé",
+      "genre": "Homme",
+      "club": "SC Magdeburg",
+      "pays": "Allemagne"
+    }
+  },
+  {
+    "id": "46",
+    "nom": "Maillot Domicile Wisla Plock Handball 2025-26",
+    "description": "Maillot domicile Wisla Plock 2025-26 noir, rouge, vert et blanc",
+    "quantite_stock": 45,
+    "prix": 24.99,
+    "devise": "€",
+    "images": [
+      "https://sklep.sprwislaplock.pl/environment/cache/images/productGfx_753_750_750/KOSZULKA_MECZ_1-1.webp",
+      "https://sklep.sprwislaplock.pl/environment/cache/images/productGfx_752_0_0/KOSZULKA_MECZ_2.webp"
+    ],
+    "caracteristiques": {
+      "competition": [
+        "EHF Champions League"
+      ],
+      "type": "Maillot domicile",
+      "couleurs": [
+        "Noir",
+        "Rouge",
+        "Vert",
+        "Blanc"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "matiere": "100% Polyester recyclé",
+      "genre": "Homme",
+      "club": "Wisla Plock",
+      "pays": "Pologne"
+    }
+  },
+  {
+    "id": "47",
+    "nom": "Maillot Extérieur Wisla Plock Handball 2025-26",
+    "description": "Maillot extérieur Wisla Plock 2025-26 blanc, rouge et vert",
+    "quantite_stock": 45,
+    "prix": 24.99,
+    "devise": "€",
+    "images": [
+      "https://sklep.sprwislaplock.pl/environment/cache/images/productGfx_638_750_750/2025_07_22_Puma_bialo_niebieska.webp",
+      "https://sklep.sprwislaplock.pl/environment/cache/images/productGfx_750_750_750/KOSZULKA_MECZ_B_2.webp"
+    ],
+    "caracteristiques": {
+      "competition": [
+        "EHF Champions League"
+      ],
+      "type": "Maillot extérieur",
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Vert"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "matiere": "100% Polyester recyclé",
+      "genre": "Homme",
+      "club": "Wisla Plock",
+      "pays": "Pologne"
+    }
+  },
+  {
+    "id": "48",
+    "nom": "Maillot Domicile GOG Håndbold 2025-26",
+    "description": "Maillot domicile GOG 2025-26 jaune et rouge",
+    "quantite_stock": 45,
+    "prix": 24.99,
+    "devise": "€",
+    "images": [
+      "https://gog.dk/wp-content/uploads/2025/02/gruppebilleder_merch_497-scaled-e1756366919519.jpg",
+      "https://gog.dk/wp-content/uploads/2023/08/gruppebilleder_merch_484-scaled.jpg"
+    ],
+    "caracteristiques": {
+      "competition": [
+        "EHF Champions League"
+      ],
+      "type": "Maillot domicile",
+      "couleurs": [
+        "Jaune",
+        "Rouge"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "matiere": "100% Polyester recyclé",
+      "genre": "Homme",
+      "club": "GOG",
+      "pays": "Danemark"
+    }
+  },
+  {
+    "id": "49",
+    "nom": "Maillot Extérieur GOG Håndbold 2025-26",
+    "description": "Maillot extérieur GOG 2025-26 bleu marine et blanc",
+    "quantite_stock": 45,
+    "prix": 24.99,
+    "devise": "€",
+    "images": [
+      "https://gog.dk/wp-content/uploads/2023/08/gruppebilleder_merch_496-scaled.jpg",
+      "https://gog.dk/wp-content/uploads/2023/08/gruppebilleder_merch_485-1025x1536.jpg"
+    ],
+    "caracteristiques": {
+      "competition": [
+        "EHF Champions League"
+      ],
+      "type": "Maillot extérieur",
+      "couleurs": [
+        "Bleu Marine",
+        "Blanc"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "matiere": "100% Polyester recyclé",
+      "genre": "Homme",
+      "club": "GOG",
+      "pays": "Danemark"
+    }
+  },
+  {
+    "id": "50",
+    "nom": "Maillot Domicile SC Pick Szeged Handball 2025-26",
+    "description": "Maillot domicile Szeged 2025-26 bleu marine",
+    "quantite_stock": 45,
+    "prix": 24.99,
+    "devise": "€",
+    "images": [
+      "https://pickhandball.cdn.shoprenter.hu/custom/pickhandball/image/cache/w350h350wt1q100/product/mez2526_elol.png.webp?lastmod=0.1683707805",
+      "https://pickhandball.cdn.shoprenter.hu/custom/pickhandball/image/cache/w350h350wt1q100/product/mez2526_hatul.png.webp?lastmod=0.1683707805"
+    ],
+    "caracteristiques": {
+      "competition": [
+        "EHF Champions League"
+      ],
+      "type": "Maillot domicile",
+      "couleurs": [
+        "Bleu Marine",
+        "Bleu"
+      ],
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "matiere": "100% Polyester recyclé",
+      "genre": "Homme",
+      "club": "Szeged",
+      "pays": "Hongrie"
+    }
+  }
+]

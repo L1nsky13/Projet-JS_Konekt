@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Konekt Handball Kits — Mon Panier</title>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="/assets/css/cart.css" />
+  <link rel="stylesheet" href="/assets/css/header.css" />
+  <link rel="stylesheet" href="/assets/css/footer.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════
+       NAVBAR
+  ═══════════════════════════════════ -->
+  <header class="navbar">
+    <div class="navbar__inner">
+      <a href="/" class="navbar__logo">
+        <img src="/assets/img/konekt.png" alt="Konekt" />
+      </a>
+      <nav class="navbar__nav" id="nav-menu">
+        <div class="nav-item">
+          <div class="navbar__link">
+            EHF Champions League
+            <svg class="nav-arrow" viewBox="0 0 10 6" width="10" height="6"><path d="M0 0l5 6 5-6z" fill="currentColor"/></svg>
+          </div>
+          <div class="dropdown">
+            <div class="dropdown__inner">
+              <% clubsEhf.forEach(function(club) { %>
+                <a href="/products?club=<%= encodeURIComponent(club.nom) %>" class="dropdown__link"><%= club.nom %></a>
+              <% }) %>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item">
+          <div class="navbar__link">
+            Liqui Moly StarLigue
+            <svg class="nav-arrow" viewBox="0 0 10 6" width="10" height="6"><path d="M0 0l5 6 5-6z" fill="currentColor"/></svg>
+          </div>
+          <div class="dropdown">
+            <div class="dropdown__inner">
+              <% clubsStarligue.forEach(function(club) { %>
+                <a href="/products?club=<%= encodeURIComponent(club.nom) %>" class="dropdown__link"><%= club.nom %></a>
+              <% }) %>
+            </div>
+          </div>
+        </div>
+        <a href="/products?club=France" class="navbar__link">France</a>
+        <a href="/products?club=Allemagne" class="navbar__link">Allemagne</a>
+      </nav>
+      <div class="navbar__actions">
+        <button class="navbar__icon-btn" id="btn-search" aria-label="Rechercher">
+          <img src="/assets/icons/search.png" alt="Rechercher" />
+        </button>
+        <a href="/cart" class="navbar__icon-btn" aria-label="Panier">
+          <img src="/assets/icons/panier.png" alt="Panier" />
+          <span class="navbar__badge" id="cart-count">0</span>
+        </a>
+        <a href="/favorites" class="navbar__icon-btn" aria-label="Favoris">
+          <img src="/assets/icons/favori.png" alt="Favoris" />
+          <span class="navbar__badge" id="fav-count">0</span>
+        </a>
+        <button class="navbar__burger" id="btn-burger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="search-bar" id="search-bar">
+      <div class="search-bar__inner">
+        <img src="/assets/icons/search.png" alt="" class="search-bar__icon" id="btn-search-submit" />
+        <input type="text" id="search-input" class="search-bar__input"
+          placeholder="Rechercher un club, une sélection…" autocomplete="off" />
+        <button class="search-bar__close" id="btn-search-close">✕</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════
+       PAGE PANIER
+  ═══════════════════════════════════ -->
+  <main class="cart-page">
+
+    <nav class="cart-breadcrumb">
+      <a href="/">Accueil</a>
+      <span>›</span>
+      <span>Mon panier</span>
+    </nav>
+
+    <h1 class="cart-title">Mon panier</h1>
+
+    <!-- Loader pendant le chargement des données -->
+    <div class="cart-loader" id="cart-loader">
+      <div class="loader__spinner"></div>
+    </div>
+
+    <!-- État vide — affiché si le panier est vide -->
+    <div class="cart-empty" id="cart-empty" style="display:none">
+      <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+        <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+      </svg>
+      <p class="cart-empty__title">Votre panier est vide</p>
+      <p class="cart-empty__text">Explorez notre catalogue et ajoutez vos maillots préférés.</p>
+      <a href="/products" class="cart-btn cart-btn--primary">Voir le catalogue</a>
+    </div>
+
+    <!-- Contenu du panier — affiché si des articles sont présents -->
+    <div class="cart-content" id="cart-content" style="display:none">
+
+      <!-- En-tête colonnes (desktop) -->
+      <div class="cart-header">
+        <div class="cart-items" id="cart-items">
+          <div class="cart-cols-header">
+            <span>Produit</span>
+            <span>Quantité</span>
+            <span>Prix</span>
+            <span></span>
+          </div>
+          <!-- Les articles sont injectés ici par cart.js -->
+        </div>
+      </div>
+
+      <!-- Résumé commande -->
+      <aside class="cart-summary">
+        <h2 class="cart-summary__title">Résumé</h2>
+        <div class="cart-summary__rows">
+          <div class="cart-summary__row">
+            <span id="cart-items-count">0 article</span>
+            <span id="cart-subtotal">0,00 €</span>
+          </div>
+          <div class="cart-summary__row cart-summary__row--shipping">
+            <span>Livraison</span>
+            <span id="cart-shipping">3,99 €</span>
+          </div>
+          <div class="cart-summary__row cart-summary__row--promo" id="promo-row" style="display:none">
+            <span id="promo-label">Réduction</span>
+            <span id="promo-discount">−0,00 €</span>
+          </div>
+        </div>
+
+        <!-- Code promo -->
+        <div class="cart-promo">
+          <div class="cart-promo__field">
+            <input type="text" id="promo-input" class="cart-promo__input" placeholder="Code promo" autocomplete="off" />
+            <button class="cart-promo__btn" id="btn-apply-promo">Appliquer</button>
+          </div>
+          <p class="cart-promo__feedback" id="promo-feedback"></p>
+        </div>
+
+        <div class="cart-summary__total">
+          <span>Total</span>
+          <span id="cart-total">0,00 €</span>
+        </div>
+        <button class="cart-btn cart-btn--checkout" id="btn-checkout">Commander</button>
+        <a href="/products" class="cart-btn cart-btn--secondary">Continuer les achats</a>
+        <button class="cart-btn cart-btn--danger" id="btn-clear-cart">Vider le panier</button>
+      </aside>
+
+    </div>
+
+    <!-- Confirmation commande — affiché après avoir commandé -->
+    <div class="cart-order-success" id="cart-order-success" style="display:none">
+      <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+        <polyline points="22 4 12 14.01 9 11.01"/>
+      </svg>
+      <p class="cart-order-success__title">Commande confirmée !</p>
+      <p class="cart-order-success__text">Merci pour votre achat. Votre commande a bien été enregistrée.</p>
+      <a href="/products" class="cart-btn cart-btn--primary" style="max-width:260px">Retour au catalogue</a>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <img src="/assets/img/konekt.png" alt="Konekt" class="footer__logo" />
+        <p class="footer__tagline">L'élite du handball, à portée de main.</p>
+      </div>
+      <div class="footer__links">
+        <span class="footer__col-title">Compétitions</span>
+        <a href="/products?competition=EHF+Champions+League">EHF Champions League</a>
+        <a href="/products?competition=Liqui+Moly+Starligue">Liqui Moly StarLigue</a>
+        <a href="/products?club=France">Équipe de France</a>
+        <a href="/products?club=Allemagne">Équipe d'Allemagne</a>
+      </div>
+      <div class="footer__links">
+        <span class="footer__col-title">Mon compte</span>
+        <a href="/cart">Mon panier</a>
+        <a href="/favorites">Mes favoris</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© Konekt Handball Kits 2026. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="/src/cart.js"></script>
+</body>
+</html>

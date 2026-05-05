@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Konekt Handball Kits — Mes Favoris</title>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="/assets/css/favorites.css" />
+  <link rel="stylesheet" href="/assets/css/header.css" />
+  <link rel="stylesheet" href="/assets/css/footer.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════
+       NAVBAR
+  ═══════════════════════════════════ -->
+  <header class="navbar">
+    <div class="navbar__inner">
+      <a href="/" class="navbar__logo">
+        <img src="/assets/img/konekt.png" alt="Konekt" />
+      </a>
+      <nav class="navbar__nav" id="nav-menu">
+        <div class="nav-item">
+          <div class="navbar__link">
+            EHF Champions League
+            <svg class="nav-arrow" viewBox="0 0 10 6" width="10" height="6"><path d="M0 0l5 6 5-6z" fill="currentColor"/></svg>
+          </div>
+          <div class="dropdown">
+            <div class="dropdown__inner">
+              <% clubsEhf.forEach(function(club) { %>
+                <a href="/products?club=<%= encodeURIComponent(club.nom) %>" class="dropdown__link"><%= club.nom %></a>
+              <% }) %>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item">
+          <div class="navbar__link">
+            Liqui Moly StarLigue
+            <svg class="nav-arrow" viewBox="0 0 10 6" width="10" height="6"><path d="M0 0l5 6 5-6z" fill="currentColor"/></svg>
+          </div>
+          <div class="dropdown">
+            <div class="dropdown__inner">
+              <% clubsStarligue.forEach(function(club) { %>
+                <a href="/products?club=<%= encodeURIComponent(club.nom) %>" class="dropdown__link"><%= club.nom %></a>
+              <% }) %>
+            </div>
+          </div>
+        </div>
+        <a href="/products?club=France" class="navbar__link">France</a>
+        <a href="/products?club=Allemagne" class="navbar__link">Allemagne</a>
+      </nav>
+      <div class="navbar__actions">
+        <button class="navbar__icon-btn" id="btn-search" aria-label="Rechercher">
+          <img src="/assets/icons/search.png" alt="Rechercher" />
+        </button>
+        <a href="/cart" class="navbar__icon-btn" aria-label="Panier">
+          <img src="/assets/icons/panier.png" alt="Panier" />
+          <span class="navbar__badge" id="cart-count">0</span>
+        </a>
+        <a href="/favorites" class="navbar__icon-btn" aria-label="Favoris">
+          <img src="/assets/icons/favori.png" alt="Favoris" />
+          <span class="navbar__badge" id="fav-count">0</span>
+        </a>
+        <button class="navbar__burger" id="btn-burger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="search-bar" id="search-bar">
+      <div class="search-bar__inner">
+        <img src="/assets/icons/search.png" alt="" class="search-bar__icon" id="btn-search-submit" />
+        <input type="text" id="search-input" class="search-bar__input"
+          placeholder="Rechercher un club, une sélection…" autocomplete="off" />
+        <button class="search-bar__close" id="btn-search-close">✕</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════
+       PAGE FAVORIS
+  ═══════════════════════════════════ -->
+  <main class="fav-page">
+
+    <nav class="fav-breadcrumb">
+      <a href="/">Accueil</a>
+      <span>›</span>
+      <span>Mes favoris</span>
+    </nav>
+
+    <div class="fav-page-header">
+      <h1 class="fav-title">Mes favoris</h1>
+      <p class="fav-subtitle" id="fav-subtitle"></p>
+    </div>
+
+    <!-- Loader pendant le chargement des favoris -->
+    <div class="fav-loader" id="fav-loader">
+      <div class="loader__spinner"></div>
+    </div>
+
+    <!-- État vide — affiché si aucun favori -->
+    <div class="fav-empty" id="fav-empty" style="display:none">
+      <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+      </svg>
+      <p class="fav-empty__title">Aucun favori pour l'instant</p>
+      <p class="fav-empty__text">Parcourez le catalogue et cliquez sur ♡ pour sauvegarder vos maillots.</p>
+      <a href="/products" class="fav-btn fav-btn--primary">Voir le catalogue</a>
+    </div>
+
+    <!-- Grille des favoris — injectée par favorites.js -->
+    <div class="fav-grid" id="fav-grid" style="display:none"></div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <img src="/assets/img/konekt.png" alt="Konekt" class="footer__logo" />
+        <p class="footer__tagline">L'élite du handball, à portée de main.</p>
+      </div>
+      <div class="footer__links">
+        <span class="footer__col-title">Compétitions</span>
+        <a href="/products?competition=EHF+Champions+League">EHF Champions League</a>
+        <a href="/products?competition=Liqui+Moly+Starligue">Liqui Moly StarLigue</a>
+        <a href="/products?club=France">Équipe de France</a>
+        <a href="/products?club=Allemagne">Équipe d'Allemagne</a>
+      </div>
+      <div class="footer__links">
+        <span class="footer__col-title">Mon compte</span>
+        <a href="/cart">Mon panier</a>
+        <a href="/favorites">Mes favoris</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© Konekt Handball Kits 2026. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="/src/favorites.js"></script>
+</body>
+</html>

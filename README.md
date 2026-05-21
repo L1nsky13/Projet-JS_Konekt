@@ -1,6 +1,6 @@
 # Konekt
  
-Site e-commerce de maillots de handball de clubs européens (EHF Champions League & Liqui Moly StarLigue) en s'inspirant de 2 sites d'e-commerce : [Maillots de foot pas cher : qualité et offres exclusives]Maxikits (Site de vente de maillots de foot à prix réduits) et [Ta boutique de handball - weplayhandball.fr] WePlayHandball (Site de vente d'équiments de handball).
+Site e-commerce de maillots de handball de clubs européens (EHF Champions League & Liqui Moly StarLigue) en s'inspirant de 2 sites d'e-commerce : [http://maxikits.com]Maxikits (Site de vente de maillots de foot à prix réduits) et [http://www.weplayhandball.com] WePlayHandball (Site de vente d'équiments de handball).
  
 ## Stack technique
  

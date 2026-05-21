@@ -1,0 +1,261 @@
+@font-face {
+  font-family: 'Oswald';
+  src: url('../font/Oswald-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+/* Variables */
+:root {
+  --electric : #00AEEF;
+  --sport    : #0056B3;
+  --night    : #101828;
+  --silver   : #E2E8F0;
+  --white    : #FFFFFF;
+
+  /* Dérivées utiles */
+  --night-80 : rgba(16, 24, 40, 0.80);
+  --night-60 : rgba(16, 24, 40, 0.60);
+  --electric-20: rgba(0, 174, 239, 0.20);
+
+  /* Typographie */
+  --font-display: 'Oswald', sans-serif;
+  --font-body   : 'Barlow', sans-serif;
+
+  /* Espacements */
+  --nav-h   : 72px;
+  --radius  : 10px;
+  --radius-sm: 6px;
+
+  /* Transitions */
+  --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Reset */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--night);
+  color: var(--silver);
+  overflow-x: hidden;
+}
+
+img { display: block; max-width: 100%; }
+a   { text-decoration: none; color: inherit; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+.hero {
+  width: 100%;
+  height: 100%;
+  margin-top: var(--nav-h);
+}
+
+.clubs {
+  overflow: hidden; /* Cache les logos qui sortent de l'écran */
+  padding: 50px 0;
+  background-color: var(--silver);
+  width: 100%;
+}
+
+.clubs-track {
+  display: flex;
+  width: max-content; /* Force le rail à prendre toute la largeur des logos */
+  gap: 85px; /* Espacement d'origine */
+  animation: scroll 30s linear infinite; /* L'animation */
+}
+
+/* On s'assure que chaque div de logo garde son espacement */
+.clubs-track div {
+  flex-shrink: 0; /* Empêche les logos de s'écraser */
+  display: flex;
+  align-items: center;
+}
+
+.clubs img {
+  width: auto;
+  height: 60px;
+  transition: transform 0.3s ease;
+}
+
+.clubs img:hover {
+  transform: scale(1.1);
+}
+
+/* L'ANIMATION */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* On déplace exactement de la moitié du rail (car on a doublé les logos) */
+    transform: translateX(calc(-50% - 35px)); 
+  }
+}
+
+/* La grille principale */
+.categories {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 colonnes comme sur l'image */
+  gap: 20px; /* Espace entre les cartes */
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* La carte */
+.category-card {
+  position: relative; /* Indispensable pour placer le texte dessus */
+  height: 350px; /* Ajustez la hauteur selon vos besoins */
+  overflow: hidden; /* Pour que le zoom de l'image ne dépasse pas */
+  border-radius: 4px;
+}
+
+.category-card__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+/* L'image de fond */
+.category-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* L'image remplit la carte sans être déformée */
+  transition: transform 0.6s ease; /* Animation fluide du zoom */
+}
+
+/* Effet de superposition (Overlay sombre en bas pour la lisibilité) */
+.category-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%; /* Le dégradé part du bas */
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  pointer-events: none; /* Laisse cliquer le lien à travers */
+}
+
+/* Le texte */
+.category-card p {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  z-index: 2; /* Passe au-dessus du dégradé */
+}
+
+/* Animation au survol */
+.category-card:hover img {
+  transform: scale(1.1);
+}
+
+/* SECTION NOUVEAUX MAILLOTS (homepage) */
+
+.featured {
+  max-width: 1200px;
+  margin: 60px auto 0;
+  padding: 0 20px 80px;
+}
+
+.featured__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.featured__title {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--silver);
+  letter-spacing: 0.04em;
+}
+
+.featured__link {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  color: var(--electric);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: opacity 0.2s;
+}
+
+.featured__link:hover { opacity: 0.7; }
+
+.featured__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Carte produit homepage */
+.feat-card {
+  background: var(--night-60);
+  border: 1px solid rgba(226, 232, 240, 0.08);
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.25s var(--ease), border-color 0.25s;
+}
+
+.feat-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 174, 239, 0.35);
+}
+
+.feat-card__img-wrapper {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: rgba(226, 232, 240, 0.04);
+}
+
+.feat-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s var(--ease);
+}
+
+.feat-card:hover .feat-card__img { transform: scale(1.06); }
+
+.feat-card__body {
+  padding: 14px 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.feat-card__name {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--silver);
+  line-height: 1.3;
+}
+
+.feat-card__price {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--electric);
+}
+
+@media (max-width: 900px) {
+  .featured__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 500px) {
+  .featured__grid { grid-template-columns: 1fr; }
+  .featured__header { flex-direction: column; gap: 8px; }
+}

@@ -1,0 +1,12 @@
+[
+  { "code": "Adib30",                      "pourcentage": 30, "type": "global" },
+  { "code": "Najman50",                    "pourcentage": 50, "type": "slow_sellers", "stock_min": 45 },
+  { "code": "stars07",                     "pourcentage": 20, "type": "global" },
+  { "code": "pu587",                       "pourcentage": 10, "type": "global" },
+  { "code": "yacin111",                    "pourcentage": 40, "type": "global" },
+  { "code": "Vito15",                      "pourcentage": 15, "type": "global" },
+  { "code": "Cyril25",                     "pourcentage": 25, "type": "global" },
+  { "code": "Vito35",                      "pourcentage": 35, "type": "global" },
+  { "code": "Vitolemeilleurdesmentors55",  "pourcentage": 55, "type": "global" },
+  { "code": "Vitometsnous20sur20stp70",    "pourcentage": 70, "type": "global" }
+]

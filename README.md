@@ -39,6 +39,7 @@ Projet-JS_Konekt/
 cd backend
 npm install
 npm start
+node server.js
 ```
  
 Ouvrir [http://localhost:8080](http://localhost:8080) dans le navigateur.

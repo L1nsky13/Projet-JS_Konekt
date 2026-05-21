@@ -5,8 +5,8 @@ Site e-commerce de maillots de handball de clubs européens (EHF Champions Leagu
 ## Stack technique
  
 - **Backend** : Node.js (module `http` natif, sans framework)
-- **Frontend** : HTML5, CSS3, JavaScript vanilla (ES6+)
-- **Données** : fichiers JSON (pas de base de données)
+- **Frontend** : HTML, CSS, JavaScript (EJS)
+- **Données** : fichiers JSON
 - **Port** : 8080
  
 ## Structure du projet

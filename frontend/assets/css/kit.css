@@ -1,8 +1,3 @@
-/* ═══════════════════════════════════════════
-   KONEKT — kit.css
-   Page détail produit (maillot)
-═══════════════════════════════════════════ */
-
 @font-face {
   font-family: 'Oswald';
   src: url('../font/Oswald-Regular.ttf') format('truetype');
@@ -24,7 +19,7 @@
   font-weight: 700;
 }
 
-/* ─── Loader ─────────────────────────────── */
+/* Loader */
 .kit-loader {
   display: flex;
   flex-direction: column;
@@ -48,14 +43,14 @@
 
 @keyframes spin { to { transform: rotate(360deg); } }
 
-/* ─── Page principale ─────────────────────── */
+/* Page principale */
 .kit-page {
   max-width: 1300px;
   margin: 0 auto;
   padding: calc(var(--nav-h) + 32px) 32px 80px;
 }
 
-/* ─── Fil d'ariane ────────────────────────── */
+/* Fil d'ariane */
 .kit-breadcrumb {
   display: flex;
   align-items: center;
@@ -72,7 +67,7 @@
 .kit-breadcrumb a { color: var(--silver); transition: color 0.2s; }
 .kit-breadcrumb a:hover { color: var(--electric); opacity: 1; }
 
-/* ─── Layout 2 colonnes ───────────────────── */
+/* Layout 2 colonnes */
 .kit-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -80,9 +75,7 @@
   align-items: start;
 }
 
-/* ══════════════════════════════════════════
-   GALERIE — carousel pleine image
-══════════════════════════════════════════ */
+/* GALERIE — carousel pleine image */
 .kit-gallery {
   position: sticky;
   top: calc(var(--nav-h) + 20px);
@@ -105,7 +98,7 @@
   transition: opacity 0.25s;
 }
 
-/* ── Flèches ──────────────────────────── */
+/* Flèches */
 .kit-carousel-arrow {
   position: absolute;
   top: 50%;
@@ -141,7 +134,7 @@
   transform: translateY(-50%) scale(1);
 }
 
-/* ── Dots ─────────────────────────────── */
+/* Dots */
 .kit-carousel-dots {
   position: absolute;
   bottom: 14px;
@@ -291,7 +284,7 @@
 .kit-required { color: var(--electric); margin-left: 2px; }
 .kit-optional { color: rgba(226, 232, 240, 0.35); font-size: 10px; font-weight: 400; }
 
-/* ─── Couleurs ────────────────────────────── */
+/* Couleurs */
 .kit-colors {
   display: flex;
   flex-wrap: wrap;
@@ -320,7 +313,7 @@
   margin-right: 4px;
 }
 
-/* ─── Caractéristiques ────────────────────── */
+/* Caractéristiques */
 .kit-chars {
   display: flex;
   flex-direction: column;
@@ -347,7 +340,7 @@
   font-weight: 500;
 }
 
-/* ─── Variantes du club ───────────────────── */
+/* Variantes du club */
 .kit-variants {
   display: flex;
   flex-wrap: wrap;
@@ -383,7 +376,7 @@
   align-items: center;
 }
 
-/* ─── Guide des tailles bouton ────────────── */
+/* Guide des tailles bouton */
 .kit-guide-btn {
   font-family: var(--font-display);
   font-size: 11px;
@@ -404,7 +397,7 @@
   border-color: var(--electric);
 }
 
-/* ─── Tailles ─────────────────────────────── */
+/* Tailles */
 .kit-sizes {
   display: flex;
   flex-wrap: wrap;
@@ -436,9 +429,7 @@
   margin-top: 4px;
 }
 
-/* ══════════════════════════════════════════
-   GUIDE DES TAILLES MODAL
-══════════════════════════════════════════ */
+/* GUIDE DES TAILLES MODAL */
 .size-guide-overlay {
   position: fixed;
   inset: 0;
@@ -629,7 +620,7 @@
   color: rgba(226, 232, 240, 0.65);
 }
 
-/* ─── Flocage ─────────────────────────────── */
+/* Flocage */
 .kit-flocage {
   display: flex;
   flex-direction: column;
@@ -690,7 +681,7 @@
   bottom: 10px;
 }
 
-/* ─── Actions : quantité + prix total ────── */
+/* Actions : quantité + prix total */
 .kit-actions {
   display: flex;
   align-items: center;
@@ -758,7 +749,7 @@
   color: var(--electric);
 }
 
-/* ─── Bouton ajouter ─────────────────────── */
+/* Bouton ajouter */
 .kit-add-btn {
   width: 100%;
   padding: 15px 24px;
@@ -792,7 +783,7 @@
   box-shadow: none;
 }
 
-/* ─── Feedback ────────────────────────────── */
+/* Feedback */
 .kit-feedback {
   margin-top: 12px;
   padding: 12px 16px;
@@ -872,7 +863,6 @@
   line-height: 1.3;
   margin-bottom: 4px;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -884,16 +874,3 @@
   color: var(--electric);
 }
 
-/* ═══════════════════════════════════════════
-   RESPONSIVE
-═══════════════════════════════════════════ */
-@media (max-width: 900px) {
-  .kit-layout { grid-template-columns: 1fr; gap: 32px; }
-  .kit-gallery { position: static; }
-  .kit-carousel-arrow { width: 38px; height: 38px; font-size: 26px; }
-}
-
-@media (max-width: 600px) {
-  .kit-page { padding: calc(var(--nav-h) + 16px) 16px 40px; }
-  .size-guide-modal { padding: 24px 20px; }
-}

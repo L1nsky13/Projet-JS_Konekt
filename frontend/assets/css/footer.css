@@ -4,7 +4,7 @@
   font-weight: 400;
 }
 
-/* ─── Variables ────────────────────────────── */
+/* Variables */
 :root {
   --electric : #00AEEF;
   --sport    : #0056B3;
@@ -30,7 +30,7 @@
   --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* ─── Reset ────────────────────────────────── */
+/* Reset */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { scroll-behavior: smooth; }
@@ -46,9 +46,7 @@ img { display: block; max-width: 100%; }
 a   { text-decoration: none; color: inherit; }
 button { cursor: pointer; border: none; background: none; font-family: inherit; }
 
-/* ═══════════════════════════════════════════
-   FOOTER
-═══════════════════════════════════════════ */
+/* FOOTER */
 .footer {
   background: #0a1120;
   border-top: 1px solid rgba(0, 174, 239, 0.10);
@@ -108,19 +106,3 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   color: rgba(226, 232, 240, 0.30);
 }
 
-/* ═══════════════════════════════════════════
-   RESPONSIVE
-═══════════════════════════════════════════ */
-@media (max-width: 768px) {
-  .footer__inner {
-    grid-template-columns: 1fr 1fr;
-    gap: 32px;
-    padding: 40px 20px 28px;
-  }
-  .footer__brand { grid-column: 1 / -1; }
-}
-
-@media (max-width: 480px) {
-  .footer__inner          { grid-template-columns: 1fr; gap: 24px; padding: 32px 16px 24px; }
-  .footer__bottom         { padding: 16px; }
-}

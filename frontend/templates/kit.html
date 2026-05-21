@@ -10,10 +10,6 @@
   <link rel="stylesheet" href="/assets/css/footer.css" />
 </head>
 <body>
-
-  <!-- ═══════════════════════════════════
-       NAVBAR
-  ═══════════════════════════════════ -->
   <header class="navbar">
     <div class="navbar__inner">
       <a href="/" class="navbar__logo">
@@ -26,11 +22,7 @@
             <svg class="nav-arrow" viewBox="0 0 10 6" width="10" height="6"><path d="M0 0l5 6 5-6z" fill="currentColor"/></svg>
           </div>
           <div class="dropdown">
-            <div class="dropdown__inner">
-              <% clubsEhf.forEach(function(club) { %>
-                <a href="/products?club=<%= encodeURIComponent(club.nom) %>" class="dropdown__link"><%= club.nom %></a>
-              <% }) %>
-            </div>
+            <div class="dropdown__inner" id="clubs-ehf"></div>
           </div>
         </div>
         <div class="nav-item">
@@ -39,11 +31,7 @@
             <svg class="nav-arrow" viewBox="0 0 10 6" width="10" height="6"><path d="M0 0l5 6 5-6z" fill="currentColor"/></svg>
           </div>
           <div class="dropdown">
-            <div class="dropdown__inner">
-              <% clubsStarligue.forEach(function(club) { %>
-                <a href="/products?club=<%= encodeURIComponent(club.nom) %>" class="dropdown__link"><%= club.nom %></a>
-              <% }) %>
-            </div>
+            <div class="dropdown__inner" id="clubs-starligue"></div>
           </div>
         </div>
         <a href="/products?club=France" class="navbar__link">France</a>
@@ -75,21 +63,12 @@
       </div>
     </div>
   </header>
-
-  <!-- ═══════════════════════════════════
-       LOADER
-  ═══════════════════════════════════ -->
   <div class="kit-loader" id="kit-loader">
     <div class="loader__spinner"></div>
     <p>Chargement du maillot…</p>
   </div>
-
-  <!-- ═══════════════════════════════════
-       PAGE KIT
-  ═══════════════════════════════════ -->
   <main class="kit-page" id="kit-page" style="display:none">
 
-    <!-- Fil d'ariane -->
     <nav class="kit-breadcrumb">
       <a href="/">Accueil</a>
       <span>›</span>
@@ -99,37 +78,27 @@
     </nav>
 
     <div class="kit-layout">
-
-      <!-- ── Colonne gauche : galerie ── -->
       <div class="kit-gallery">
         <div class="kit-main-img-wrapper" id="kit-main-wrapper">
           <img src="" alt="" class="kit-main-img" id="kit-main-img" />
 
-          <!-- Flèches sur les côtés -->
           <button class="kit-carousel-arrow kit-carousel-arrow--prev" id="carousel-prev" aria-label="Précédent">&#8249;</button>
           <button class="kit-carousel-arrow kit-carousel-arrow--next" id="carousel-next" aria-label="Suivant">&#8250;</button>
 
-          <!-- Points de navigation -->
           <div class="kit-carousel-dots" id="kit-carousel-dots"></div>
         </div>
       </div>
-
-      <!-- ── Colonne droite : infos ── -->
       <div class="kit-info">
 
-        <!-- Catégorie + stock -->
         <div class="kit-meta">
           <p class="kit-competition" id="kit-competition"></p>
           <p class="kit-stock" id="kit-stock"></p>
         </div>
 
-        <!-- Nom -->
         <h1 class="kit-name" id="kit-name"></h1>
 
-        <!-- Prix -->
         <p class="kit-price" id="kit-price"></p>
 
-        <!-- Description -->
         <div class="kit-desc-wrapper">
           <p class="kit-desc" id="kit-desc"></p>
           <button class="kit-desc-toggle" id="btn-desc-toggle" style="display:none">
@@ -137,27 +106,22 @@
           </button>
         </div>
 
-        <!-- Couleurs du maillot -->
         <div class="kit-section">
           <p class="kit-label">Couleurs</p>
           <div class="kit-colors" id="kit-colors"></div>
         </div>
 
-        <!-- Variantes du même club -->
         <div class="kit-section" id="kit-variants-section" style="display:none">
           <p class="kit-label">Autres variantes</p>
           <div class="kit-variants" id="kit-variants"></div>
         </div>
 
-        <!-- Caractéristiques complètes -->
         <div class="kit-section">
           <p class="kit-label">Caractéristiques</p>
           <dl class="kit-chars" id="kit-chars"></dl>
         </div>
 
         <div class="kit-divider"></div>
-
-        <!-- Taille -->
         <div class="kit-section">
           <div class="kit-section-header">
             <p class="kit-label">Taille <span class="kit-required">*</span></p>
@@ -166,14 +130,11 @@
           <div class="kit-sizes" id="kit-sizes"></div>
           <p class="kit-error" id="size-error" style="display:none">Veuillez sélectionner une taille</p>
         </div>
-
-        <!-- Guide des tailles (modal) -->
         <div class="size-guide-overlay" id="size-guide-overlay">
           <div class="size-guide-modal">
             <button class="size-guide-close" id="btn-guide-close">✕</button>
             <h2 class="size-guide-title">Guide des tailles</h2>
 
-            <!-- Tableau -->
             <div class="size-guide-table-wrapper">
               <table class="size-guide-table">
                 <thead>
@@ -195,7 +156,6 @@
               </table>
             </div>
 
-            <!-- Comment mesurer -->
             <div class="size-guide-howto">
               <h3>Comment choisir ma taille ?</h3>
               <table class="size-guide-def">
@@ -207,7 +167,7 @@
                 </tbody>
               </table>
               <div class="size-guide-tip">
-                <strong>💡 Conseils</strong>
+                <strong>Conseils</strong>
                 <ul>
                   <li>Utilisez un ruban à mesurer souple</li>
                   <li>Mesurez directement sur le corps, pas sur des vêtements</li>
@@ -215,15 +175,13 @@
                 </ul>
               </div>
               <div class="size-guide-note">
-                ⚠️ Les mesures peuvent varier de 1–3 cm en raison de la méthode de mesure manuelle.
+                Les mesures peuvent varier de 1–3 cm en raison de la méthode de mesure manuelle.
               </div>
             </div>
           </div>
         </div>
 
         <div class="kit-divider"></div>
-
-        <!-- Flocage -->
         <div class="kit-section">
           <p class="kit-label">Flocage <span class="kit-optional">(optionnel)</span></p>
 
@@ -263,8 +221,6 @@
         </div>
 
         <div class="kit-divider"></div>
-
-        <!-- Quantité + Ajouter au panier -->
         <div class="kit-actions">
           <div class="kit-qty">
             <button class="kit-qty-btn" id="qty-minus" aria-label="Diminuer">−</button>
@@ -286,24 +242,19 @@
           Ajouter au panier
         </button>
 
-        <!-- Feedback -->
         <div class="kit-feedback" id="kit-feedback" style="display:none"></div>
 
       </div>
     </div>
-
-    <!-- Similaires -->
     <section class="kit-similaires" id="kit-similaires" style="display:none">
       <h2 class="kit-similaires-title">Vous aimerez aussi</h2>
       <div class="kit-similaires-grid" id="kit-similaires-grid"></div>
     </section>
 
   </main>
-
-  <!-- Footer -->
   <footer class="footer">
     <div class="footer__inner">
-      <div class="footer__brand">
+      <div>
         <img src="/assets/img/konekt.png" alt="Konekt" class="footer__logo" />
         <p class="footer__tagline">L'élite du handball, à portée de main.</p>
       </div>

@@ -4,7 +4,7 @@
   font-weight: 400;
 }
 
-/* ─── Variables ────────────────────────────── */
+/* Variables */
 :root {
   --electric : #00AEEF;
   --sport    : #0056B3;
@@ -30,7 +30,7 @@
   --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* ─── Reset ────────────────────────────────── */
+/* Reset */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { scroll-behavior: smooth; }
@@ -157,20 +157,105 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   transform: scale(1.1);
 }
 
-/* ═══════════════════════════════════════════
-   RESPONSIVE — Page d'accueil
-═══════════════════════════════════════════ */
-@media (max-width: 768px) {
-  .categories {
-    grid-template-columns: 1fr;
-    padding: 12px;
-    gap: 12px;
-  }
-  .category-card { height: 240px; }
-  .clubs img     { height: 44px; }
+/* SECTION NOUVEAUX MAILLOTS (homepage) */
+
+.featured {
+  max-width: 1200px;
+  margin: 60px auto 0;
+  padding: 0 20px 80px;
 }
 
-@media (max-width: 480px) {
-  .category-card { height: 190px; }
-  .clubs         { padding: 32px 0; }
+.featured__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.featured__title {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--silver);
+  letter-spacing: 0.04em;
+}
+
+.featured__link {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  color: var(--electric);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: opacity 0.2s;
+}
+
+.featured__link:hover { opacity: 0.7; }
+
+.featured__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Carte produit homepage */
+.feat-card {
+  background: var(--night-60);
+  border: 1px solid rgba(226, 232, 240, 0.08);
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.25s var(--ease), border-color 0.25s;
+}
+
+.feat-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 174, 239, 0.35);
+}
+
+.feat-card__img-wrapper {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: rgba(226, 232, 240, 0.04);
+}
+
+.feat-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s var(--ease);
+}
+
+.feat-card:hover .feat-card__img { transform: scale(1.06); }
+
+.feat-card__body {
+  padding: 14px 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.feat-card__name {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--silver);
+  line-height: 1.3;
+}
+
+.feat-card__price {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--electric);
+}
+
+@media (max-width: 900px) {
+  .featured__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 500px) {
+  .featured__grid { grid-template-columns: 1fr; }
+  .featured__header { flex-direction: column; gap: 8px; }
 }

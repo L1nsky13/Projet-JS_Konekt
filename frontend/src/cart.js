@@ -1,12 +1,6 @@
-// ═══════════════════════════════════════════════
-// KONEKT — cart.js
-// Gère : affichage du panier, modification des
-//        quantités, suppression, vidage, commande
-// ═══════════════════════════════════════════════
-
 const API = 'http://localhost:8080/api'
 
-// ─── Sélecteurs DOM ─────────────────────────
+// Sélecteurs DOM
 const navbar         = document.querySelector('.navbar')
 const btnBurger      = document.getElementById('btn-burger')
 const navMenu        = document.getElementById('nav-menu')
@@ -43,9 +37,7 @@ const promoDiscountEl = document.getElementById('promo-discount')
 let cartItems    = []
 let appliedPromo = null // { code, pourcentage, type, applicableIds? }
 
-// ═══════════════════════════════════════════
 // NAVBAR
-// ═══════════════════════════════════════════
 
 // Classe scrolled ajoutée dès qu'on scroll de plus de 40px
 window.addEventListener('scroll', () => {
@@ -75,9 +67,7 @@ document.querySelectorAll('.dropdown__link').forEach(link => {
   })
 })
 
-// ═══════════════════════════════════════════
 // RECHERCHE
-// ═══════════════════════════════════════════
 
 // Ouvre la barre de recherche et met le focus sur l'input
 if (btnSearch) {
@@ -112,9 +102,7 @@ if (btnSearchSubmit) {
   btnSearchSubmit.addEventListener('click', doSearch)
 }
 
-// ═══════════════════════════════════════════
 // CHARGEMENT DU PANIER
-// ═══════════════════════════════════════════
 
 // Récupère le panier depuis l'API et lance le rendu
 async function loadCart() {
@@ -130,9 +118,7 @@ async function loadCart() {
   }
 }
 
-// ═══════════════════════════════════════════
 // RENDU
-// ═══════════════════════════════════════════
 
 // Reconstruit l'affichage complet du panier
 function renderCart() {
@@ -262,9 +248,7 @@ function updateBadge(count) {
   }
 }
 
-// ═══════════════════════════════════════════
 // ACTIONS PANIER
-// ═══════════════════════════════════════════
 
 // Modifie la quantité d'un article ; si <= 0 on le supprime
 async function updateQuantity(id, newQty) {
@@ -364,9 +348,7 @@ async function checkout() {
   }
 }
 
-// ═══════════════════════════════════════════
 // CODE PROMO
-// ═══════════════════════════════════════════
 
 async function applyPromo() {
   const code = promoInput.value.trim()
@@ -417,9 +399,50 @@ if (promoInput)    promoInput.addEventListener('keydown', e => { if (e.key === '
 if (btnClearCart) btnClearCart.addEventListener('click', clearCart)
 if (btnCheckout)  btnCheckout.addEventListener('click', checkout)
 
-// ═══════════════════════════════════════════
+// DROPDOWNS NAVBAR
+
+// Charge les clubs depuis l'API et remplit les menus déroulants de la navbar
+async function loadDropdowns() {
+  try {
+    const res = await fetch(`${API}/products`)
+    if (!res.ok) return
+    const products = await res.json()
+    buildDropdown(products, 'EHF Champions League', 'clubs-ehf')
+    buildDropdown(products, 'Liqui Moly Starligue',  'clubs-starligue')
+  } catch (err) {
+    console.error('Erreur dropdowns :', err)
+  }
+}
+
+// Construit le contenu d'un dropdown à partir de la liste des produits
+function buildDropdown(products, competition, containerId) {
+  const container = document.getElementById(containerId)
+  if (!container) return
+
+  const clubsMap = {}
+  products.forEach(function(p) {
+    const competitions = p.caracteristiques.competition
+    const club = p.caracteristiques.club
+    if (Array.isArray(competitions) && competitions.includes(competition) && club && club !== 'NaN' && !clubsMap[club]) {
+      clubsMap[club] = parseInt(p.id)
+    }
+  })
+
+  const clubs = Object.entries(clubsMap)
+    .sort(function(a, b) { return a[1] - b[1] })
+    .map(function(entry) { return entry[0] })
+
+  if (clubs.length === 0) {
+    container.innerHTML = '<span class="dropdown__empty">Aucun club trouvé</span>'
+    return
+  }
+
+  container.innerHTML = clubs.map(function(club) {
+    return '<a href="/products?club=' + encodeURIComponent(club) + '" class="dropdown__link">' + club + '</a>'
+  }).join('')
+}
+
 // COMPTEUR FAVORIS (badge navbar)
-// ═══════════════════════════════════════════
 
 // Charge le nombre de favoris pour afficher le badge
 async function updateFavCount() {
@@ -434,12 +457,11 @@ async function updateFavCount() {
   } catch {}
 }
 
-// ═══════════════════════════════════════════
-// INITIALISATION
-// ═══════════════════════════════════════════
+// INITIALISATION 
 
 async function init() {
   await updateFavCount()
+  loadDropdowns()
   await loadCart()
 }
 

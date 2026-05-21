@@ -1,12 +1,6 @@
-// ═══════════════════════════════════════════════
-// KONEKT — favorites.js
-// Gère : affichage des favoris, suppression d'un
-//        favori, ajout au panier depuis les favoris
-// ═══════════════════════════════════════════════
-
 const API = 'http://localhost:8080/api'
 
-// ─── Sélecteurs DOM ─────────────────────────
+// Sélecteurs DOM
 const navbar         = document.querySelector('.navbar')
 const btnBurger      = document.getElementById('btn-burger')
 const navMenu        = document.getElementById('nav-menu')
@@ -26,9 +20,7 @@ const favSubtitle  = document.getElementById('fav-subtitle')
 // Liste des favoris courants
 let favorites = []
 
-// ═══════════════════════════════════════════
 // NAVBAR
-// ═══════════════════════════════════════════
 
 // Classe scrolled quand on dépasse 40px de défilement
 window.addEventListener('scroll', () => {
@@ -59,9 +51,7 @@ document.querySelectorAll('.dropdown__link').forEach(link => {
 })
 
 
-// ═══════════════════════════════════════════
 // RECHERCHE
-// ═══════════════════════════════════════════
 
 // Ouvre la barre de recherche et met le focus
 if (btnSearch) {
@@ -96,9 +86,7 @@ if (btnSearchSubmit) {
   btnSearchSubmit.addEventListener('click', doSearch)
 }
 
-// ═══════════════════════════════════════════
 // CHARGEMENT DES FAVORIS
-// ═══════════════════════════════════════════
 
 // Récupère les favoris via l'API et lance le rendu
 async function loadFavorites() {
@@ -114,9 +102,7 @@ async function loadFavorites() {
   }
 }
 
-// ═══════════════════════════════════════════
 // RENDU
-// ═══════════════════════════════════════════
 
 // Reconstruit la grille des favoris
 function renderFavorites() {
@@ -183,9 +169,7 @@ function buildCardHTML(item) {
   `
 }
 
-// ═══════════════════════════════════════════
 // ACTIONS FAVORIS
-// ═══════════════════════════════════════════
 
 // Retire un produit des favoris et rafraîchit l'affichage
 async function removeFavorite(id) {
@@ -243,9 +227,50 @@ async function addToCart(id, btn) {
   }
 }
 
-// ═══════════════════════════════════════════
+// DROPDOWNS NAVBAR
+
+// Charge les clubs depuis l'API et remplit les menus déroulants de la navbar
+async function loadDropdowns() {
+  try {
+    const res = await fetch(`${API}/products`)
+    if (!res.ok) return
+    const products = await res.json()
+    buildDropdown(products, 'EHF Champions League', 'clubs-ehf')
+    buildDropdown(products, 'Liqui Moly Starligue',  'clubs-starligue')
+  } catch (err) {
+    console.error('Erreur dropdowns :', err)
+  }
+}
+
+// Construit le contenu d'un dropdown à partir de la liste des produits
+function buildDropdown(products, competition, containerId) {
+  const container = document.getElementById(containerId)
+  if (!container) return
+
+  const clubsMap = {}
+  products.forEach(function(p) {
+    const competitions = p.caracteristiques.competition
+    const club = p.caracteristiques.club
+    if (Array.isArray(competitions) && competitions.includes(competition) && club && club !== 'NaN' && !clubsMap[club]) {
+      clubsMap[club] = parseInt(p.id)
+    }
+  })
+
+  const clubs = Object.entries(clubsMap)
+    .sort(function(a, b) { return a[1] - b[1] })
+    .map(function(entry) { return entry[0] })
+
+  if (clubs.length === 0) {
+    container.innerHTML = '<span class="dropdown__empty">Aucun club trouvé</span>'
+    return
+  }
+
+  container.innerHTML = clubs.map(function(club) {
+    return '<a href="/products?club=' + encodeURIComponent(club) + '" class="dropdown__link">' + club + '</a>'
+  }).join('')
+}
+
 // BADGES NAVBAR
-// ═══════════════════════════════════════════
 
 // Met à jour le badge panier dans la navbar
 async function updateCartCount() {
@@ -269,12 +294,11 @@ function updateFavBadge() {
   }
 }
 
-// ═══════════════════════════════════════════
 // INITIALISATION
-// ═══════════════════════════════════════════
 
 async function init() {
   await updateCartCount()
+  loadDropdowns()
   await loadFavorites()
 }
 

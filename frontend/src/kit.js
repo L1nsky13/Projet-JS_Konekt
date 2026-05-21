@@ -1,12 +1,6 @@
-// ═══════════════════════════════════════════════
-// KONEKT — kit.js
-// Gère : chargement produit, galerie,
-//        tailles, flocage, quantité, panier
-// ═══════════════════════════════════════════════
-
 const API = 'http://localhost:8080/api'
 
-// ─── Sélecteurs DOM ─────────────────────────
+// Sélecteurs DOM
 const navbar         = document.querySelector('.navbar')
 const btnBurger      = document.getElementById('btn-burger')
 const navMenu        = document.getElementById('nav-menu')
@@ -79,15 +73,13 @@ const kitFeedback    = document.getElementById('kit-feedback')
 const similairesSection = document.getElementById('kit-similaires')
 const similairesGrid    = document.getElementById('kit-similaires-grid')
 
-// ─── État ────────────────────────────────────
+// État
 let product      = null
 let allProducts  = []
 let selectedSize = null
 let quantity     = 1
 
-// ═══════════════════════════════════════════
 // NAVBAR
-// ═══════════════════════════════════════════
 
 window.addEventListener('scroll', () => {
   navbar.classList.toggle('navbar--scrolled', window.scrollY > 40)
@@ -130,11 +122,7 @@ if (btnSearchClose) {
   })
 }
 
-// ═══════════════════════════════════════════
-// CHARGEMENT PRODUIT
-// On charge TOUS les produits depuis l'API
-// puis on filtre par ID côté client
-// ═══════════════════════════════════════════
+// CHARGEMENT PRODUIT — tous les produits depuis l'API, filtre par ID côté client
 
 async function loadProduct() {
   const params = new URLSearchParams(window.location.search)
@@ -146,15 +134,15 @@ async function loadProduct() {
   }
 
   try {
-    // Utilise le cache sessionStorage pour éviter un appel réseau inutile
-    const cached = sessionStorage.getItem('konekt_products')
+    // Utilise le cache localStorage pour éviter un appel réseau inutile
+    const cached = localStorage.getItem('konekt_products')
     if (cached) {
       allProducts = JSON.parse(cached)
     } else {
       const res = await fetch(`${API}/products`)
       if (!res.ok) throw new Error('Erreur API')
       allProducts = await res.json()
-      sessionStorage.setItem('konekt_products', JSON.stringify(allProducts))
+      localStorage.setItem('konekt_products', JSON.stringify(allProducts))
     }
 
     // Trouve le produit par ID (les IDs sont des strings dans le JSON)
@@ -182,9 +170,7 @@ async function loadProduct() {
   }
 }
 
-// ═══════════════════════════════════════════
 // RENDU DU PRODUIT
-// ═══════════════════════════════════════════
 
 function renderProduct() {
   kitLoader.style.display = 'none'
@@ -254,7 +240,7 @@ function renderProduct() {
   updateTotal()
 }
 
-// ─── Couleurs ─────────────────────────────────
+// Couleurs
 function renderColors() {
   const couleurs = product.caracteristiques.couleurs || []
   kitColorsEl.innerHTML = couleurs.map(c => {
@@ -265,7 +251,7 @@ function renderColors() {
   }).join('')
 }
 
-// ─── Caractéristiques ─────────────────────────
+// Caractéristiques
 function renderChars() {
   const c = product.caracteristiques
   const rows = [
@@ -284,7 +270,7 @@ function renderChars() {
     .join('')
 }
 
-// ─── Variantes du même club ────────────────────
+// Variantes du même club
 function renderVariants() {
   const club = product.caracteristiques.club
   if (!club) return
@@ -311,7 +297,7 @@ function renderVariants() {
   `).join('')
 }
 
-// ─── Galerie ──────────────────────────────────
+// Galerie
 function renderGallery() {
   const images = product.images || []
   if (images.length === 0) return
@@ -365,7 +351,7 @@ function renderGallery() {
 }
 
 
-// ─── Tailles ──────────────────────────────────
+// Tailles
 function renderSizes() {
   const tailles = product.caracteristiques.tailles || []
   kitSizes.innerHTML = tailles.map(t => `
@@ -390,7 +376,7 @@ function renderSizes() {
   }
 }
 
-// ─── Guide des tailles ────────────────────────
+// Guide des tailles
 btnGuide.addEventListener('click', () => {
   sizeGuide.classList.add('open')
   document.body.style.overflow = 'hidden'
@@ -411,7 +397,7 @@ function closeGuide() {
   document.body.style.overflow = ''
 }
 
-// ─── Flocage — compteurs ──────────────────────
+// Flocage — compteurs
 inputNom.addEventListener('input', () => {
   inputNom.value = inputNom.value.toUpperCase()
   nomCount.textContent = `${inputNom.value.length}/12`
@@ -424,7 +410,7 @@ inputNumero.addEventListener('input', () => {
   updateTotal()
 })
 
-// ─── Quantité ─────────────────────────────────
+// Quantité
 qtyMinus.addEventListener('click', () => {
   if (quantity > 1) {
     quantity--
@@ -442,7 +428,7 @@ qtyPlus.addEventListener('click', () => {
   }
 })
 
-// ─── Calcul prix total ────────────────────────
+// Calcul prix total
 function updateTotal() {
   if (!product) return
   let total = product.prix
@@ -452,9 +438,7 @@ function updateTotal() {
   priceTotal.textContent = `${total.toFixed(2)} ${product.devise}`
 }
 
-// ═══════════════════════════════════════════
 // AJOUTER AU PANIER
-// ═══════════════════════════════════════════
 
 btnAddCart.addEventListener('click', async () => {
 
@@ -525,10 +509,7 @@ function showFeedback(msg, type) {
   setTimeout(() => { kitFeedback.style.display = 'none' }, 4000)
 }
 
-// ═══════════════════════════════════════════
-// PRODUITS SIMILAIRES
-// Même compétition ou même pays, hors produit actuel
-// ═══════════════════════════════════════════
+// PRODUITS SIMILAIRES — même compétition ou même pays, hors produit actuel
 
 function loadSimilaires() {
   const comp  = Array.isArray(product.caracteristiques.competition)
@@ -561,9 +542,50 @@ function loadSimilaires() {
   `).join('')
 }
 
-// ═══════════════════════════════════════════
+// DROPDOWNS NAVBAR
+
+// Charge les clubs depuis l'API et remplit les menus déroulants de la navbar
+async function loadDropdowns() {
+  try {
+    const res = await fetch(`${API}/products`)
+    if (!res.ok) return
+    const products = await res.json()
+    buildDropdown(products, 'EHF Champions League', 'clubs-ehf')
+    buildDropdown(products, 'Liqui Moly Starligue',  'clubs-starligue')
+  } catch (err) {
+    console.error('Erreur dropdowns :', err)
+  }
+}
+
+// Construit le contenu d'un dropdown à partir de la liste des produits
+function buildDropdown(products, competition, containerId) {
+  const container = document.getElementById(containerId)
+  if (!container) return
+
+  const clubsMap = {}
+  products.forEach(function(p) {
+    const competitions = p.caracteristiques.competition
+    const club = p.caracteristiques.club
+    if (Array.isArray(competitions) && competitions.includes(competition) && club && club !== 'NaN' && !clubsMap[club]) {
+      clubsMap[club] = parseInt(p.id)
+    }
+  })
+
+  const clubs = Object.entries(clubsMap)
+    .sort(function(a, b) { return a[1] - b[1] })
+    .map(function(entry) { return entry[0] })
+
+  if (clubs.length === 0) {
+    container.innerHTML = '<span class="dropdown__empty">Aucun club trouvé</span>'
+    return
+  }
+
+  container.innerHTML = clubs.map(function(club) {
+    return '<a href="/products?club=' + encodeURIComponent(club) + '" class="dropdown__link">' + club + '</a>'
+  }).join('')
+}
+
 // PANIER & FAVORIS — compteurs navbar
-// ═══════════════════════════════════════════
 
 async function updateCartCount() {
   try {
@@ -590,12 +612,11 @@ async function updateFavCount() {
   } catch (err) {}
 }
 
-// ═══════════════════════════════════════════
 // INIT
-// ═══════════════════════════════════════════
 
 async function init() {
   await Promise.all([updateCartCount(), updateFavCount()])
+  loadDropdowns()
   await loadProduct()
 }
 

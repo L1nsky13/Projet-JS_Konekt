@@ -10,10 +10,6 @@
   <link rel="stylesheet" href="/assets/css/footer.css" />
 </head>
 <body>
-
-  <!-- ═══════════════════════════════════
-       NAVBAR
-  ═══════════════════════════════════ -->
   <header class="navbar">
     <div class="navbar__inner">
       <a href="/" class="navbar__logo">
@@ -26,11 +22,7 @@
             <svg class="nav-arrow" viewBox="0 0 10 6" width="10" height="6"><path d="M0 0l5 6 5-6z" fill="currentColor"/></svg>
           </div>
           <div class="dropdown">
-            <div class="dropdown__inner">
-              <% clubsEhf.forEach(function(club) { %>
-                <a href="/products?club=<%= encodeURIComponent(club.nom) %>" class="dropdown__link"><%= club.nom %></a>
-              <% }) %>
-            </div>
+            <div class="dropdown__inner" id="clubs-ehf"></div>
           </div>
         </div>
         <div class="nav-item">
@@ -39,11 +31,7 @@
             <svg class="nav-arrow" viewBox="0 0 10 6" width="10" height="6"><path d="M0 0l5 6 5-6z" fill="currentColor"/></svg>
           </div>
           <div class="dropdown">
-            <div class="dropdown__inner">
-              <% clubsStarligue.forEach(function(club) { %>
-                <a href="/products?club=<%= encodeURIComponent(club.nom) %>" class="dropdown__link"><%= club.nom %></a>
-              <% }) %>
-            </div>
+            <div class="dropdown__inner" id="clubs-starligue"></div>
           </div>
         </div>
         <a href="/products?club=France" class="navbar__link">France</a>
@@ -75,10 +63,6 @@
       </div>
     </div>
   </header>
-
-  <!-- ═══════════════════════════════════
-       PAGE FAVORIS
-  ═══════════════════════════════════ -->
   <main class="fav-page">
 
     <nav class="fav-breadcrumb">
@@ -92,12 +76,10 @@
       <p class="fav-subtitle" id="fav-subtitle"></p>
     </div>
 
-    <!-- Loader pendant le chargement des favoris -->
     <div class="fav-loader" id="fav-loader">
       <div class="loader__spinner"></div>
     </div>
 
-    <!-- État vide — affiché si aucun favori -->
     <div class="fav-empty" id="fav-empty" style="display:none">
       <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
         <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
@@ -107,15 +89,12 @@
       <a href="/products" class="fav-btn fav-btn--primary">Voir le catalogue</a>
     </div>
 
-    <!-- Grille des favoris — injectée par favorites.js -->
     <div class="fav-grid" id="fav-grid" style="display:none"></div>
 
   </main>
-
-  <!-- Footer -->
   <footer class="footer">
     <div class="footer__inner">
-      <div class="footer__brand">
+      <div>
         <img src="/assets/img/konekt.png" alt="Konekt" class="footer__logo" />
         <p class="footer__tagline">L'élite du handball, à portée de main.</p>
       </div>

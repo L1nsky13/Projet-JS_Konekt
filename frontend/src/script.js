@@ -1,6 +1,6 @@
 const API = 'http://localhost:8080/api'
 
-// ─── Sélecteurs DOM ─────────────────────────
+// Sélecteurs DOM
 const navbar         = document.querySelector('.navbar')
 const btnBurger      = document.getElementById('btn-burger')
 const navMenu        = document.getElementById('nav-menu')
@@ -13,14 +13,13 @@ const cartCount      = document.getElementById('cart-count')
 const favCount       = document.getElementById('fav-count')
 
 // Dropdowns
-const navEhf          = document.getElementById('nav-ehf')
-const navStarligue    = document.getElementById('nav-starligue')
 const clubsEhf        = document.getElementById('clubs-ehf')
 const clubsStarligue  = document.getElementById('clubs-starligue')
 
-// ═══════════════════════════════════════════
+// Section nouveaux maillots
+const featuredGrid = document.getElementById('featured-grid')
+
 // NAVBAR — scroll + burger
-// ═══════════════════════════════════════════
 
 window.addEventListener('scroll', () => {
   navbar.classList.toggle('navbar--scrolled', window.scrollY > 40)
@@ -51,9 +50,7 @@ document.querySelectorAll('.dropdown__link').forEach(link => {
   })
 })
 
-// ═══════════════════════════════════════════
 // RECHERCHE
-// ═══════════════════════════════════════════
 
 if (btnSearch) {
   btnSearch.addEventListener('click', () => {
@@ -86,9 +83,7 @@ if (btnSearchSubmit) {
   btnSearchSubmit.addEventListener('click', doSearch)
 }
 
-// ═══════════════════════════════════════════
 // DROPDOWNS — chargement dynamique via API
-// ═══════════════════════════════════════════
 
 async function loadDropdowns() {
   try {
@@ -133,9 +128,7 @@ function buildDropdown(products, competitionLabel, container, clubKey) {
   ).join('')
 }
 
-// ═══════════════════════════════════════════
 // COMPTEURS PANIER & FAVORIS
-// ═══════════════════════════════════════════
 
 async function updateCartCount() {
   try {
@@ -166,15 +159,57 @@ async function updateFavCount() {
   }
 }
 
-// ═══════════════════════════════════════════
+// NOUVEAUX MAILLOTS — injection JSON homepage
+
+async function loadFeaturedProducts() {
+  if (!featuredGrid) return
+
+  try {
+    const res = await fetch(`${API}/products`)
+    if (!res.ok) throw new Error('Erreur API')
+
+    const products = await res.json()
+
+    // On prend les 8 premiers produits pour la vitrine
+    const featured = products.slice(0, 8)
+
+    // Injection dans le DOM : chaque produit devient une carte cliquable
+    featuredGrid.innerHTML = featured.map(p => `
+      <article class="feat-card" data-id="${p.id}">
+        <div class="feat-card__img-wrapper">
+          <img class="feat-card__img"
+            src="${p.images[0]}"
+            alt="${p.nom}"
+            loading="lazy" />
+        </div>
+        <div class="feat-card__body">
+          <h3 class="feat-card__name">${p.nom}</h3>
+          <p class="feat-card__price">${p.prix.toFixed(2)} ${p.devise}</p>
+        </div>
+      </article>
+    `).join('')
+
+    // Chaque carte redirige vers sa page détail
+    featuredGrid.querySelectorAll('.feat-card').forEach(card => {
+      card.addEventListener('click', () => {
+        window.location.href = `/kit?id=${card.dataset.id}`
+      })
+    })
+
+  } catch (err) {
+    console.error('Erreur chargement maillots vedettes :', err)
+    featuredGrid.innerHTML = '<p style="color:rgba(226,232,240,0.4);text-align:center;padding:40px 0">Impossible de charger les maillots.</p>'
+  }
+}
+
 // INITIALISATION
-// ═══════════════════════════════════════════
 
 async function init() {
   await Promise.all([
     updateCartCount(),
     updateFavCount(),
-    loadDropdowns()
+    loadDropdowns(),
+    loadFeaturedProducts()
   ])
 }
 

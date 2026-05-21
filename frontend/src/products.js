@@ -1,13 +1,7 @@
-// ═══════════════════════════════════════════════
-// KONEKT — products.js
-// Gère : chargement produits, filtres sidebar,
-//        tri, pagination, panier/favoris
-// ═══════════════════════════════════════════════
-
 const API            = 'http://localhost:8080/api'
 const ITEMS_PER_PAGE = 20
 
-// ─── Sélecteurs DOM ─────────────────────────
+// Sélecteurs DOM
 const navbar          = document.querySelector('.navbar')
 const btnBurger       = document.getElementById('btn-burger')
 const navMenu         = document.getElementById('nav-menu')
@@ -36,7 +30,7 @@ const sizeBtns        = document.querySelectorAll('.size-btn')
 const typeBtns        = document.querySelectorAll('.type-btn')
 const colorBtns       = document.querySelectorAll('.color-btn')
 
-// ─── État ────────────────────────────────────
+// État
 let allProducts  = []
 let filtered     = []
 let favoritesIds = []
@@ -51,9 +45,7 @@ let activeFilters = {
   search   : ''
 }
 
-// ═══════════════════════════════════════════
 // NAVBAR
-// ═══════════════════════════════════════════
 
 window.addEventListener('scroll', () => {
   navbar.classList.toggle('navbar--scrolled', window.scrollY > 40)
@@ -115,7 +107,7 @@ if (btnSearchSubmit) {
   })
 }
 
-// ─── Dropdowns navbar ────────────────────────
+// Dropdowns navbar
 async function loadDropdowns() {
   try {
     const res = await fetch(`${API}/products`)
@@ -156,22 +148,20 @@ function buildDropdown(products, competition, containerId) {
       ).join('')
 }
 
-// ═══════════════════════════════════════════
-// CHARGEMENT PRODUITS
-// ═══════════════════════════════════════════
+// CHARGEMENT PRODUITS 
 
 async function loadProducts() {
   try {
     showLoader()
-    // Vérifie le cache sessionStorage avant d'appeler l'API
-    const cached = sessionStorage.getItem('konekt_products')
+    // Vérifie le cache localStorage avant d'appeler l'API
+    const cached = localStorage.getItem('konekt_products')
     if (cached) {
       allProducts = JSON.parse(cached)
     } else {
       const res = await fetch(`${API}/products`)
       if (!res.ok) throw new Error('Erreur API')
       allProducts = await res.json()
-      sessionStorage.setItem('konekt_products', JSON.stringify(allProducts))
+      localStorage.setItem('konekt_products', JSON.stringify(allProducts))
     }
     syncFiltersFromURL()
     applyFilters()
@@ -209,9 +199,7 @@ function syncFiltersFromURL() {
   }
 }
 
-// ═══════════════════════════════════════════
 // FILTRAGE
-// ═══════════════════════════════════════════
 
 function applyFilters() {
   const params      = new URLSearchParams(window.location.search)
@@ -276,9 +264,7 @@ function applyFilters() {
   renderPage()
 }
 
-// ═══════════════════════════════════════════
 // RENDU
-// ═══════════════════════════════════════════
 
 function renderPage() {
   hideLoader()
@@ -374,7 +360,7 @@ function createCardHTML(product) {
   `
 }
 
-// ─── Pagination ────────────────────────────
+// Pagination
 function renderPagination() {
   const totalPages = Math.ceil(filtered.length / ITEMS_PER_PAGE)
   if (totalPages <= 1) { paginationEl.innerHTML = ''; return }
@@ -401,9 +387,7 @@ function renderPagination() {
   })
 }
 
-// ═══════════════════════════════════════════
 // SIDEBAR — événements
-// ═══════════════════════════════════════════
 
 // Mise à jour visuelle du slider de prix
 function updateRangeFill() {
@@ -502,9 +486,7 @@ btnReset.addEventListener('click', () => {
   applyFilters()
 })
 
-// ═══════════════════════════════════════════
 // PANIER & FAVORIS
-// ═══════════════════════════════════════════
 
 async function updateCartCount() {
   try {
@@ -590,9 +572,7 @@ async function toggleFavorite(productId, btn) {
   } catch (err) {}
 }
 
-// ═══════════════════════════════════════════
 // UTILITAIRES
-// ═══════════════════════════════════════════
 
 function showLoader() {
   if (loader) loader.style.display = 'flex'
@@ -603,9 +583,7 @@ function hideLoader() {
   if (loader) loader.style.display = 'none'
 }
 
-// ═══════════════════════════════════════════
 // INIT
-// ═══════════════════════════════════════════
 
 async function init() {
   updateRangeFill()

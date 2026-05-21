@@ -26,13 +26,7 @@
             </svg>
           </div>
           <div class="dropdown">
-            <div class="dropdown__inner">
-              <% clubsEhf.forEach(function(club) { %>
-                <a href="/products?club=<%= encodeURIComponent(club.nom) %>" class="dropdown__link">
-                  <%= club.nom %>
-                </a>
-              <% }) %>
-            </div>
+            <div class="dropdown__inner" id="clubs-ehf"></div>
           </div>
         </div>
 
@@ -44,13 +38,7 @@
             </svg>
           </div>
           <div class="dropdown">
-            <div class="dropdown__inner">
-              <% clubsStarligue.forEach(function(club) { %>
-                <a href="/products?club=<%= encodeURIComponent(club.nom) %>" class="dropdown__link">
-                  <%= club.nom %>
-                </a>
-              <% }) %>
-            </div>
+            <div class="dropdown__inner" id="clubs-starligue"></div>
           </div>
         </div>
 
@@ -88,11 +76,7 @@
   </header>
 
   <div class="catalogue-layout">
-
-    <!-- ── Sidebar ── -->
     <aside class="sidebar">
-
-      <!-- Prix -->
       <div class="sidebar__block">
         <h3 class="sidebar__title">Filtrer par prix</h3>
         <div class="price-range__labels">
@@ -108,8 +92,6 @@
         </div>
         <button class="sidebar__apply-btn" id="btn-apply-price">Filtrer</button>
       </div>
-
-      <!-- Taille -->
       <div class="sidebar__block">
         <h3 class="sidebar__title">Taille</h3>
         <div class="size-filter">
@@ -120,8 +102,6 @@
           <button class="size-btn" data-size="XXL">XXL</button>
         </div>
       </div>
-
-      <!-- Type — un seul actif à la fois -->
       <div class="sidebar__block">
         <h3 class="sidebar__title">Type</h3>
         <div class="type-filter">
@@ -131,43 +111,41 @@
           <button class="type-btn" data-type="third">Third</button>
         </div>
       </div>
-
-      <!-- Couleur — sélection multiple -->
       <div class="sidebar__block">
         <h3 class="sidebar__title">Couleur</h3>
         <div class="color-filter">
           <button class="color-btn" data-color="Blanc">
-            <span class="color-swatch" style="background:#FFFFFF;border:1px solid rgba(226,232,240,0.3)"></span>Blanc
+            Blanc
           </button>
           <button class="color-btn" data-color="Noir">
-            <span class="color-swatch" style="background:#111111"></span>Noir
+            Noir
           </button>
           <button class="color-btn" data-color="Rouge">
-            <span class="color-swatch" style="background:#CC0000"></span>Rouge
+            Rouge
           </button>
           <button class="color-btn" data-color="Bleu">
-            <span class="color-swatch" style="background:#003087"></span>Bleu
+            Bleu
           </button>
           <button class="color-btn" data-color="Bleu marine">
-            <span class="color-swatch" style="background:#001F5B"></span>Bleu marine
+            Bleu marine
           </button>
           <button class="color-btn" data-color="Vert">
-            <span class="color-swatch" style="background:#006400"></span>Vert
+            Vert
           </button>
           <button class="color-btn" data-color="Jaune">
-            <span class="color-swatch" style="background:#FFD700;border:1px solid rgba(226,232,240,0.2)"></span>Jaune
+            Jaune
           </button>
           <button class="color-btn" data-color="Violet">
-            <span class="color-swatch" style="background:#5B2D8E"></span>Violet
+            Violet
           </button>
           <button class="color-btn" data-color="Orange">
-            <span class="color-swatch" style="background:#FF6600"></span>Orange
+            Orange
           </button>
           <button class="color-btn" data-color="Or">
-            <span class="color-swatch" style="background:#CFB53B;border:1px solid rgba(226,232,240,0.2)"></span>Or
+            Or
           </button>
           <button class="color-btn" data-color="Rose">
-            <span class="color-swatch" style="background:#FF69B4"></span>Rose
+            Rose
           </button>
         </div>
       </div>
@@ -175,8 +153,6 @@
       <button class="sidebar__reset-btn" id="btn-reset">Réinitialiser les filtres</button>
 
     </aside>
-
-    <!-- ── Catalogue ── -->
     <main class="catalogue-main">
 
       <nav class="breadcrumb">
@@ -215,7 +191,7 @@
 
   <footer class="footer">
     <div class="footer__inner">
-      <div class="footer__brand">
+      <div>
         <img src="/assets/img/konekt.png" alt="Konekt" class="footer__logo" />
         <p class="footer__tagline">L'élite du handball, à portée de main.</p>
       </div>

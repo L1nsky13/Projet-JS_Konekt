@@ -18,7 +18,6 @@
 
       <nav class="navbar__nav" id="nav-menu">
 
-        <!-- ── EHF Champions League — dropdown EJS ── -->
         <div class="nav-item">
           <div class="navbar__link">
             EHF Champions League
@@ -27,20 +26,10 @@
             </svg>
           </div>
           <div class="dropdown">
-            <div class="dropdown__inner">
-              <% clubsEhf.forEach(function(club) { %>
-                <a
-                  href="/products?club=<%= encodeURIComponent(club.nom) %>"
-                  class="dropdown__link"
-                >
-                  <%= club.nom %>
-                </a>
-              <% }) %>
-            </div>
+            <div class="dropdown__inner" id="clubs-ehf"></div>
           </div>
         </div>
 
-        <!-- ── Liqui Moly StarLigue — dropdown EJS ── -->
         <div class="nav-item">
           <div class="navbar__link">
             Liqui Moly StarLigue
@@ -49,20 +38,10 @@
             </svg>
           </div>
           <div class="dropdown">
-            <div class="dropdown__inner">
-              <% clubsStarligue.forEach(function(club) { %>
-                <a
-                  href="/products?club=<%= encodeURIComponent(club.nom) %>"
-                  class="dropdown__link"
-                >
-                  <%= club.nom %>
-                </a>
-              <% }) %>
-            </div>
+            <div class="dropdown__inner" id="clubs-starligue"></div>
           </div>
         </div>
 
-        <!-- ── Liens simples ── -->
         <a href="/products?club=France" class="navbar__link">France</a>
         <a href="/products?club=Allemagne" class="navbar__link">Allemagne</a>
 
@@ -91,7 +70,6 @@
       </div>
     </div>
 
-    <!-- Barre de recherche -->
     <div class="search-bar" id="search-bar">
       <div class="search-bar__inner">
         <img src="/assets/icons/search.png" alt="" class="search-bar__icon" id="btn-search-submit" />
@@ -106,13 +84,9 @@
       </div>
     </div>
   </header>
-
-  <!-- Hero -->
   <section class="hero">
     <img src="/assets/img/konekt-desktop.png" alt="Konekt — Maillots de Handball" />
   </section>
-
-  <!-- Défilement logos clubs -->
   <section class="clubs">
     <div class="clubs-track">
       <div><img src="/assets/img/FC_Barcelona.png" alt="Logo FC Barcelone"></div>
@@ -123,11 +97,11 @@
       <div><img src="/assets/img/Kielce.png" alt="Logo Kielce"></div>
       <div><img src="/assets/img/HBC_Nantes.png" alt="Logo HBC Nantes"></div>
       <div><img src="/assets/img/PSG_Handball.png" alt="Logo PSG Handball"></div>
-      <div><img src="/assets/img/Veszprém.png" alt="Logo Veszprém"></div>
+      <div><img src="/assets/img/Veszprem.png" alt="Logo Veszprém"></div>
       <div><img src="/assets/img/Sporting.png" alt="Logo Sporting"></div>
       <div><img src="/assets/img/GOG.png" alt="Logo GOG"></div>
       <div><img src="/assets/img/Szeged.png" alt="Logo Szeged"></div>
-      <!-- Doublon pour l'effet défilement infini -->
+
       <div><img src="/assets/img/FC_Barcelona.png" alt="Logo FC Barcelone"></div>
       <div><img src="/assets/img/Fuchse_Berlin.png" alt="Logo Fuchse Berlin"></div>
       <div><img src="/assets/img/SC_Magdeburg.png" alt="Logo SC Magdeburg"></div>
@@ -136,14 +110,12 @@
       <div><img src="/assets/img/Kielce.png" alt="Logo Kielce"></div>
       <div><img src="/assets/img/HBC_Nantes.png" alt="Logo HBC Nantes"></div>
       <div><img src="/assets/img/PSG_Handball.png" alt="Logo PSG Handball"></div>
-      <div><img src="/assets/img/Veszprém.png" alt="Logo Veszprém"></div>
+      <div><img src="/assets/img/Veszprem.png" alt="Logo Veszprém"></div>
       <div><img src="/assets/img/Sporting.png" alt="Logo Sporting"></div>
       <div><img src="/assets/img/GOG.png" alt="Logo GOG"></div>
       <div><img src="/assets/img/Szeged.png" alt="Logo Szeged"></div>
     </div>
   </section>
-
-  <!-- Catégories -->
   <section class="categories">
     <div class="category-card">
       <a href="/products?competition=EHF+Champions+League" class="category-card__link">
@@ -170,11 +142,18 @@
       </a>
     </div>
   </section>
+  <section class="featured">
+    <div class="featured__header">
+      <h2 class="featured__title">Nouveaux maillots</h2>
+      <a href="/products" class="featured__link">Voir tout le catalogue →</a>
+    </div>
+    <div class="featured__grid" id="featured-grid">
 
-  <!-- Footer -->
+    </div>
+  </section>
   <footer class="footer">
     <div class="footer__inner">
-      <div class="footer__brand">
+      <div>
         <img src="/assets/img/konekt.png" alt="Konekt" class="footer__logo" />
         <p class="footer__tagline">L'élite du handball, à portée de main.</p>
       </div>
@@ -195,7 +174,6 @@
       <p>© Konekt Handball Kits 2026. Tous droits réservés.</p>
     </div>
   </footer>
-
   <script src="/src/script.js"></script>
 </body>
 </html>

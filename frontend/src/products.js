@@ -1,4 +1,4 @@
-const API            = 'http://localhost:8080/api'
+const API = '/api'
 const ITEMS_PER_PAGE = 20
 
 // Sélecteurs DOM

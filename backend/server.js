@@ -227,4 +227,5 @@ const server = http.createServer(async (req, res) => {
   res.end('Not found')
 })
 
-server.listen(8080, () => console.log('Serveur Konekt démarré sur http://localhost:8080'))
+const PORT = process.env.PORT || 8080
+server.listen(PORT, '0.0.0.0', () => console.log(`Serveur Konekt démarré sur le port ${PORT}`))

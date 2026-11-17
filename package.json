@@ -1,0 +1,10 @@
+{
+  "name": "konekt",
+  "private": true,
+  "scripts": {
+    "start": "node backend/server.js"
+  },
+  "engines": {
+    "node": "22.x"
+  }
+}
